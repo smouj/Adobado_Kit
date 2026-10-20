@@ -1,0 +1,32 @@
+name: Windows build
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Install NASM
+        run: choco install nasm -y --no-progress
+      - name: Build PhotoAdobado
+        run: cargo build --release --locked -p photocraft
+      - name: Package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Copy-Item target/release/photocraft.exe dist/PhotoAdobado.exe
+          Copy-Item LICENSE-MIT,LICENSE-APACHE,NOTICE,ATTRIBUTION.md dist/
+          Compress-Archive -Path dist/* -DestinationPath PhotoAdobado-windows-x64.zip -Force
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PhotoAdobado-windows-x64
+          path: PhotoAdobado-windows-x64.zip
+          if-no-files-found: error
