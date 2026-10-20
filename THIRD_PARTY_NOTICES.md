@@ -32,6 +32,14 @@ documento resume las dependencias del kit.
 - Archivos: `vendor/highlight.min.js`, `vendor/github-dark.min.css`
 - Texto: `apps/markdown-studio/vendor/LICENSES/highlightjs.txt`
 
+## PhotoCraft / PhotoAdobado
+
+- Repo derivado: https://github.com/smouj/PhotoAdobado
+- Upstream: https://github.com/storytold/photocraft
+- Commit base: 03d0c7e3b39cfb401cdbba590431141ee4c6c8fa
+- Licencia: MIT OR Apache-2.0; se conservan LICENSE-MIT, LICENSE-APACHE, NOTICE y ATTRIBUTION.md.
+- La marca y los logos de ArtCraft se han retirado de la distribucion.
+
 ## Marcas
 
 Adobe y los nombres de sus productos son marcas de Adobe Inc. Adobado Kit no

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="PhotoAdobado">
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="#0d1117" stroke="#6cb6ff" stroke-width="38"/>
+  <rect x="210" y="250" width="604" height="524" rx="46" fill="#eef2f6"/>
+  <rect x="250" y="290" width="524" height="444" rx="24" fill="#bfe0ff"/>
+  <circle cx="430" cy="430" r="82" fill="#ff7a59"/>
+  <path d="M250 734 L470 470 L640 734 Z" fill="#6cb6ff"/>
+  <path d="M540 734 L690 540 L774 734 Z" fill="#b8f34a"/>
+  <rect x="250" y="760" width="524" height="32" rx="16" fill="#b8f34a"/>
+</svg>

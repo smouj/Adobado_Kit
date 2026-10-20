@@ -18,10 +18,13 @@ Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en 
 
 | App | Qué hace | Estado |
 |---|---|---|
+| [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local derivado de PhotoCraft: capas, máscaras, PSD y ajustes. | Alpha |
 | [Markdown Studio](apps/markdown-studio/) | Editor y visor Markdown con GFM, resaltado, índice y exportación HTML. | v1.0.0 |
 | [XLSX Viewer](apps/xlsx-viewer/) | Visor local de Excel (.xlsx/.xlsm/.xls/.csv) con búsqueda e inspector de celda. | v1.0.0 |
 
 Abre el hub en [`index.html`](index.html) o entra directamente en cada app.
+
+El catálogo completo, con repos y estado real, está en [docs/APPS.md](docs/APPS.md).
 
 ## En el taller
 
