@@ -16,7 +16,7 @@ Hay releases alpha para Photo, Film y Sound. Sus paquetes se generaron antes de 
 4. Preparar una primera release para las otras apps solo cuando superen el mismo criterio.
 5. Mantener la documentación, las capturas, los metadatos sociales y la paridad de iconos sincronizados en cada cambio.
 
-## Criterio para cerrar una app
+## Requisitos antes de publicar una descarga
 
 - Build correcto para Windows.
 - Instalación e inicio manual comprobados.
@@ -25,9 +25,9 @@ Hay releases alpha para Photo, Film y Sound. Sus paquetes se generaron antes de 
 - Licencias, avisos, captura, README y changelog revisados.
 - Release con versión, artefacto y notas coincidentes.
 
-## Principios del proyecto
+## Información para quien descarga
 
-- Local primero: sin cuentas, telemetría ni procesamiento en servidores propios.
-- Formatos estándar y dependencias con licencias documentadas.
-- Las tarjetas de marca no se presentan como capturas de interfaz.
-- Sin promesas de paridad con productos comerciales.
+- Indicar en cada ficha dónde se procesan los archivos y qué formatos admite la app.
+- Mantener visibles las licencias, dependencias y avisos de terceros.
+- Identificar las tarjetas de marca como piezas gráficas; no presentarlas como capturas de interfaz.
+- Describir las herramientas por sus funciones, sin compararlas con productos comerciales.
