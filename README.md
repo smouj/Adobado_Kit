@@ -16,9 +16,9 @@ Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en 
 
 | App | Qué hace | Estado |
 |---|---|---|
-| [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft. | Build OK · artifact pendiente |
+| [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft. | Probada en Windows |
 | [ArtAdobado](https://github.com/smouj/ArtAdobado) | Arte vectorial y SVG local. Derivado de VectorCraft. | Alpha |
-| [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edición de vídeo local. Derivado de FilmCraft. | Alpha |
+| [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edición de vídeo local. Derivado de FilmCraft. | Probada en Windows |
 | [EffectAdobado](https://github.com/smouj/EffectAdobado) | Efectos visuales locales. Derivado de EffectCraft. | Alpha |
 | [LightAdobado](https://github.com/smouj/LightAdobado) | Revelado y color local. Derivado de LightCraft. | Build OK · artifact pendiente |
 | [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edición de audio local. Derivado de SoundCraft. | Probada en Windows |
