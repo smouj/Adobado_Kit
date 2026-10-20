@@ -12,6 +12,11 @@ Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en 
 
 > **Adobado Kit no está afiliado a Adobe.** Es un proyecto personal e independiente. Los nombres de productos se usan solo para describir categorías de herramientas.
 
+## Descargas
+
+- **Launcher + instalador:** [AdobadoKit-Launcher-v0.3.0.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.0/AdobadoKit-Launcher-v0.3.0.zip). Abre o instala las apps, crea accesos directos y no requiere administrador.
+- **Wallpapers:** [AdobadoKit-Wallpapers-v1.0.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.0/AdobadoKit-Wallpapers-v1.0.zip). Tres variantes en 16:9, 21:9, 16:10, 4:3 y móvil.
+
 ## Apps
 
 | App | Qué hace | Estado |

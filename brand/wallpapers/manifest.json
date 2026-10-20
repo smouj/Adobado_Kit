@@ -1,0 +1,341 @@
+{
+  "brand": "Adobado Kit",
+  "version": "1.0",
+  "variants": [
+    "prism",
+    "orbit",
+    "grid"
+  ],
+  "wallpapers": [
+    {
+      "file": "adobado-prism-desktop-4k.jpg",
+      "variant": "prism",
+      "width": 3840,
+      "height": 2160,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-orbit-desktop-4k.jpg",
+      "variant": "orbit",
+      "width": 3840,
+      "height": 2160,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-grid-desktop-4k.jpg",
+      "variant": "grid",
+      "width": 3840,
+      "height": 2160,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-prism-desktop-qhd.jpg",
+      "variant": "prism",
+      "width": 2560,
+      "height": 1440,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-orbit-desktop-qhd.jpg",
+      "variant": "orbit",
+      "width": 2560,
+      "height": 1440,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-grid-desktop-qhd.jpg",
+      "variant": "grid",
+      "width": 2560,
+      "height": 1440,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-prism-desktop-fhd.jpg",
+      "variant": "prism",
+      "width": 1920,
+      "height": 1080,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-orbit-desktop-fhd.jpg",
+      "variant": "orbit",
+      "width": 1920,
+      "height": 1080,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-grid-desktop-fhd.jpg",
+      "variant": "grid",
+      "width": 1920,
+      "height": 1080,
+      "aspect": "16:9",
+      "devices": [
+        "desktop"
+      ]
+    },
+    {
+      "file": "adobado-prism-ultrawide-21-9.jpg",
+      "variant": "prism",
+      "width": 3440,
+      "height": 1440,
+      "aspect": "21:9",
+      "devices": [
+        "ultrawide"
+      ]
+    },
+    {
+      "file": "adobado-orbit-ultrawide-21-9.jpg",
+      "variant": "orbit",
+      "width": 3440,
+      "height": 1440,
+      "aspect": "21:9",
+      "devices": [
+        "ultrawide"
+      ]
+    },
+    {
+      "file": "adobado-grid-ultrawide-21-9.jpg",
+      "variant": "grid",
+      "width": 3440,
+      "height": 1440,
+      "aspect": "21:9",
+      "devices": [
+        "ultrawide"
+      ]
+    },
+    {
+      "file": "adobado-prism-laptop-16-10.jpg",
+      "variant": "prism",
+      "width": 2560,
+      "height": 1600,
+      "aspect": "16:10",
+      "devices": [
+        "laptop"
+      ]
+    },
+    {
+      "file": "adobado-orbit-laptop-16-10.jpg",
+      "variant": "orbit",
+      "width": 2560,
+      "height": 1600,
+      "aspect": "16:10",
+      "devices": [
+        "laptop"
+      ]
+    },
+    {
+      "file": "adobado-grid-laptop-16-10.jpg",
+      "variant": "grid",
+      "width": 2560,
+      "height": 1600,
+      "aspect": "16:10",
+      "devices": [
+        "laptop"
+      ]
+    },
+    {
+      "file": "adobado-prism-tablet-4-3.jpg",
+      "variant": "prism",
+      "width": 2048,
+      "height": 1536,
+      "aspect": "4:3",
+      "devices": [
+        "tablet"
+      ]
+    },
+    {
+      "file": "adobado-orbit-tablet-4-3.jpg",
+      "variant": "orbit",
+      "width": 2048,
+      "height": 1536,
+      "aspect": "4:3",
+      "devices": [
+        "tablet"
+      ]
+    },
+    {
+      "file": "adobado-grid-tablet-4-3.jpg",
+      "variant": "grid",
+      "width": 2048,
+      "height": 1536,
+      "aspect": "4:3",
+      "devices": [
+        "tablet"
+      ]
+    },
+    {
+      "file": "adobado-prism-laptop-hd.jpg",
+      "variant": "prism",
+      "width": 1366,
+      "height": 768,
+      "aspect": "16:9",
+      "devices": [
+        "laptop"
+      ]
+    },
+    {
+      "file": "adobado-orbit-laptop-hd.jpg",
+      "variant": "orbit",
+      "width": 1366,
+      "height": 768,
+      "aspect": "16:9",
+      "devices": [
+        "laptop"
+      ]
+    },
+    {
+      "file": "adobado-grid-laptop-hd.jpg",
+      "variant": "grid",
+      "width": 1366,
+      "height": 768,
+      "aspect": "16:9",
+      "devices": [
+        "laptop"
+      ]
+    },
+    {
+      "file": "adobado-prism-phone-19-5-9.jpg",
+      "variant": "prism",
+      "width": 1170,
+      "height": 2532,
+      "aspect": "19.5:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-orbit-phone-19-5-9.jpg",
+      "variant": "orbit",
+      "width": 1170,
+      "height": 2532,
+      "aspect": "19.5:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-grid-phone-19-5-9.jpg",
+      "variant": "grid",
+      "width": 1170,
+      "height": 2532,
+      "aspect": "19.5:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-prism-phone-20-9.jpg",
+      "variant": "prism",
+      "width": 1080,
+      "height": 2400,
+      "aspect": "20:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-orbit-phone-20-9.jpg",
+      "variant": "orbit",
+      "width": 1080,
+      "height": 2400,
+      "aspect": "20:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-grid-phone-20-9.jpg",
+      "variant": "grid",
+      "width": 1080,
+      "height": 2400,
+      "aspect": "20:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-prism-phone-16-9.jpg",
+      "variant": "prism",
+      "width": 1440,
+      "height": 2560,
+      "aspect": "16:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-orbit-phone-16-9.jpg",
+      "variant": "orbit",
+      "width": 1440,
+      "height": 2560,
+      "aspect": "16:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-grid-phone-16-9.jpg",
+      "variant": "grid",
+      "width": 1440,
+      "height": 2560,
+      "aspect": "16:9",
+      "devices": [
+        "phone"
+      ]
+    },
+    {
+      "file": "adobado-prism-tablet-ipad.jpg",
+      "variant": "prism",
+      "width": 2732,
+      "height": 2048,
+      "aspect": "4:3",
+      "devices": [
+        "tablet"
+      ]
+    },
+    {
+      "file": "adobado-orbit-tablet-ipad.jpg",
+      "variant": "orbit",
+      "width": 2732,
+      "height": 2048,
+      "aspect": "4:3",
+      "devices": [
+        "tablet"
+      ]
+    },
+    {
+      "file": "adobado-grid-tablet-ipad.jpg",
+      "variant": "grid",
+      "width": 2732,
+      "height": 2048,
+      "aspect": "4:3",
+      "devices": [
+        "tablet"
+      ]
+    }
+  ]
+}
