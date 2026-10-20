@@ -1,7 +1,10 @@
 # Adobado Kit
 
+<p align="center"><img src="assets/logo.svg" width="96" alt="Adobado Kit"></p>
+
 **Herramientas creativas locales, sin suscripciones y sin nube.**
 
+[![Stars](https://img.shields.io/github/stars/smouj/Adobado_Kit?style=flat&color=B8F34A)](https://github.com/smouj/Adobado_Kit/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-b8f34a)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.2.0-6cb6ff)](https://github.com/smouj/Adobado_Kit/releases)
 [![Local-first](https://img.shields.io/badge/privacy-100%25%20local-b8f34a)](#principios)
@@ -21,14 +24,14 @@ Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en 
 
 | App | Qué hace | Estado |
 |---|---|---|
-| [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft. | Probada en Windows |
-| [ArtAdobado](https://github.com/smouj/ArtAdobado) | Arte vectorial y SVG local. Derivado de VectorCraft. | Alpha |
-| [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edición de vídeo local. Derivado de FilmCraft. | Probada en Windows |
-| [EffectAdobado](https://github.com/smouj/EffectAdobado) | Efectos visuales locales. Derivado de EffectCraft. | Build OK · artifact pendiente |
-| [LightAdobado](https://github.com/smouj/LightAdobado) | Revelado y color local. Derivado de LightCraft. | Build OK · artifact pendiente |
-| [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edición de audio local. Derivado de SoundCraft. | Probada en Windows |
-| [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseño y composición local. Derivado de DesignCraft. | Build OK · artifact pendiente |
-| [PdfAdobado](https://github.com/smouj/PdfAdobado) | PDF local: lectura, edición y organización. Derivado de PdfCraft. | Repo creado · build en curso |
+| <img src="assets/icons/photo.png" width="22" alt=""> [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft. | Probada en Windows |
+| <img src="assets/icons/art.png" width="22" alt=""> [ArtAdobado](https://github.com/smouj/ArtAdobado) | Arte vectorial y SVG local. Derivado de VectorCraft. | Alpha |
+| <img src="assets/icons/film.png" width="22" alt=""> [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edición de vídeo local. Derivado de FilmCraft. | Probada en Windows |
+| <img src="assets/icons/effect.png" width="22" alt=""> [EffectAdobado](https://github.com/smouj/EffectAdobado) | Efectos visuales locales. Derivado de EffectCraft. | Build OK · artifact pendiente |
+| <img src="assets/icons/light.png" width="22" alt=""> [LightAdobado](https://github.com/smouj/LightAdobado) | Revelado y color local. Derivado de LightCraft. | Build OK · artifact pendiente |
+| <img src="assets/icons/sound.png" width="22" alt=""> [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edición de audio local. Derivado de SoundCraft. | Probada en Windows |
+| <img src="assets/icons/design.png" width="22" alt=""> [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseño y composición local. Derivado de DesignCraft. | Build OK · artifact pendiente |
+| <img src="assets/icons/pdf.png" width="22" alt=""> [PdfAdobado](https://github.com/smouj/PdfAdobado) | PDF local: lectura, edición y organización. Derivado de PdfCraft. | Repo creado · build en curso |
 
 El catálogo con commits, licencias y estado real está en [docs/APPS.md](docs/APPS.md).
 
