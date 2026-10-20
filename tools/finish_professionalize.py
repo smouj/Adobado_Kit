@@ -10,7 +10,7 @@ APPS=[
  ("PdfAdobado","/home/smouj/adobado-import/PdfAdobado","pdf",(91,141,239),"Repo creado · build en curso",False),
 ]
 STAR='[![Stars](https://img.shields.io/github/stars/smouj/%s?style=flat&color=FF5C5C)](https://github.com/smouj/%s/stargazers)'
-SEC='# Security\n\nReporta vulnerabilidades en privado a SMOUJ013. Las apps son locales, sin backend ni telemetria.\n'
+SEC='# Security\n\nReporta vulnerabilidades en privado a @smouj. Las apps son locales, sin backend ni telemetria.\n'
 COC='# Codigo de conducta\n\nRespeto, critica tecnica y cumplimiento de licencias. Sin acoso ni discriminacion.\n'
 
 def preview(app,dest,slug,hue,status):

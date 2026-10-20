@@ -1,20 +1,20 @@
-import os, json, math
-import numpy as np
+import os, json, math, shutil
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-BASE = "/home/smouj/.openclaw/workspace/infest/apps/adobado-kit"
-OUT = os.path.join(BASE, "brand", "wallpapers")
-THEME = os.path.join(BASE, "installer", "theme")
-os.makedirs(OUT, exist_ok=True)
-os.makedirs(THEME, exist_ok=True)
-FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-FONT_R = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+BASE = Path(__file__).resolve().parents[1]
+OUT = BASE / "brand" / "wallpapers"
+THEME = BASE / "installer" / "theme"
+OUT.mkdir(parents=True, exist_ok=True)
+THEME.mkdir(parents=True, exist_ok=True)
+FONT = r"C:\Windows\Fonts\segoeuib.ttf" if Path(r"C:\Windows\Fonts\segoeuib.ttf").is_file() else "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+FONT_R = r"C:\Windows\Fonts\segoeui.ttf" if Path(r"C:\Windows\Fonts\segoeui.ttf").is_file() else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 INK = (8,10,14)
 CREAM = (238,242,246)
 LIME = (184,243,74)
 CORAL = (255,92,92)
 BLUE = (91,141,239)
-APPS = [("photo","PhotoAdobado",CORAL),("art","ArtAdobado",(232,90,200)),("film","FilmAdobado",(255,159,67)),("effect","EffectAdobado",(155,123,255)),("light","LightAdobado",(255,224,102)),("sound","SoundAdobado",(77,214,232)),("design","DesignAdobado",(139,224,78)),("pdf","PdfAdobado",(91,141,239))]
+APPS = [("photo","PhotoAdobado",(255,92,92)),("art","ArtAdobado",(232,90,200)),("film","FilmAdobado",(255,159,67)),("effect","EffectAdobado",(155,123,255)),("light","LightAdobado",(242,201,76)),("sound","SoundAdobado",(53,200,216)),("design","DesignAdobado",(123,217,87)),("pdf","PdfAdobado",(79,131,232))]
 SIZES = [
  (3840,2160,"desktop-4k","16:9","desktop"),
  (2560,1440,"desktop-qhd","16:9","desktop"),
@@ -30,43 +30,47 @@ SIZES = [
 ]
 
 def base(w,h,seed=7):
-    rng=np.random.default_rng(seed)
-    y,x=np.mgrid[0:h,0:w].astype(np.float32)
-    arr=np.zeros((h,w,3),dtype=np.float32)
-    arr[:]=np.array(INK,dtype=np.float32)
+    """Build a soft, deterministic brand background without external arrays."""
+    image=Image.new("RGBA",(w,h),INK+(255,))
+    scale=min(w,h)
     glows=[
       (0.16,0.20,0.32,0.40,CORAL),
       (0.84,0.16,0.36,0.35,BLUE),
-      (0.62,0.86,0.40,0.25,(139,224,78)),
+      (0.62,0.86,0.40,0.25,(123,217,87)),
       (0.30,0.78,0.30,0.18,(155,123,255)),
     ]
-    for cx,cy,sig,strength,col in glows:
-        d2=((x-cx*w)**2+(y-cy*h)**2)/(2*(sig*min(w,h))**2)
-        g=np.exp(-d2).astype(np.float32)*strength
-        for i in range(3):
-            arr[:,:,i]+=g*col[i]
-    # vignette
-    nx=(x/w-0.5)*2; ny=(y/h-0.5)*2
-    v=np.clip(1-0.38*(nx*nx+ny*ny),0.35,1).astype(np.float32)
-    arr*=v[:,:,None]
-    arr+=rng.normal(0,1.6,(h,w,1)).astype(np.float32)
-    return Image.fromarray(np.clip(arr,0,255).astype(np.uint8),"RGB")
+    for cx,cy,radius,strength,color in glows:
+        layer=Image.new("RGBA",(w,h),(0,0,0,0))
+        draw=ImageDraw.Draw(layer)
+        r=radius*scale
+        x=cx*w; y=cy*h
+        draw.ellipse((x-r,y-r,x+r,y+r),fill=tuple(color)+(round(255*strength),))
+        layer=layer.filter(ImageFilter.GaussianBlur(max(1,int(scale*radius*0.52))))
+        image=Image.alpha_composite(image,layer)
+    # A restrained vignette gives the centered launcher mark enough contrast.
+    radial=Image.radial_gradient("L").resize((w,h),Image.Resampling.BICUBIC)
+    edge=Image.eval(radial,lambda value: 255-value)
+    edge=edge.point(lambda value: round(value*0.32))
+    shade=Image.new("RGBA",(w,h),(0,0,0,0))
+    shade.putalpha(edge)
+    return Image.alpha_composite(image,shade).convert("RGB")
+
 
 def mark_layer(size, cx, cy, r):
-    layer=Image.new("RGBA",(size[0],size[1]),(0,0,0,0))
-    d=ImageDraw.Draw(layer)
-    # glow
-    glow=Image.new("RGBA",(size[0],size[1]),(0,0,0,0))
+    """Place the official launcher icon so wallpapers and app chrome agree."""
+    layer=Image.new("RGBA",size,(0,0,0,0))
+    glow=Image.new("RGBA",size,(0,0,0,0))
     gd=ImageDraw.Draw(glow)
-    gd.ellipse((cx-r*0.9,cy-r*0.9,cx+r*0.9,cy+r*0.9),fill=(184,243,74,40))
-    glow=glow.filter(ImageFilter.GaussianBlur(r*0.35))
-    layer=Image.alpha_composite(layer,glow)
-    d=ImageDraw.Draw(layer)
-    cr=r*0.34
-    d.ellipse((cx-r*0.30-cr,cy-r*0.12-cr,cx-r*0.30+cr,cy-r*0.12+cr),fill=CORAL+(255,))
-    d.ellipse((cx+r*0.30-cr,cy-r*0.12-cr,cx+r*0.30+cr,cy-r*0.12+cr),fill=BLUE+(255,))
-    d.rounded_rectangle((cx-r*0.46,cy+r*0.26,cx+r*0.46,cy+r*0.44),radius=r*0.09,fill=LIME+(255,))
+    gd.ellipse((cx-r*1.15,cy-r*1.15,cx+r*1.15,cy+r*1.15),fill=(184,243,74,34))
+    layer=Image.alpha_composite(layer,glow.filter(ImageFilter.GaussianBlur(r*0.32)))
+    icon_path=BASE/"launcher"/"launcher.png"
+    if not icon_path.is_file():
+        raise FileNotFoundError(f"Missing canonical launcher icon: {icon_path}")
+    with Image.open(icon_path) as source:
+        icon=source.convert("RGBA").resize((max(1,int(r*2)),max(1,int(r*2))),Image.Resampling.LANCZOS)
+    layer.alpha_composite(icon,(int(cx-icon.width/2),int(cy-icon.height/2)))
     return layer
+
 
 def text_layer(size, cx, y, fs, sub=None):
     layer=Image.new("RGBA",size,(0,0,0,0)); d=ImageDraw.Draw(layer)
@@ -100,7 +104,7 @@ def compose(w,h,variant):
         cx,cy=w*0.5,h*0.44
         r=m*0.16
         img=Image.alpha_composite(img,mark_layer((w,h),cx,cy,r))
-        img=Image.alpha_composite(img,text_layer((w,h),cx,cy+r*1.35,m*0.065,"Herramientas creativas locales"))
+        img=Image.alpha_composite(img,text_layer((w,h),cx,cy+r*1.35,m*0.065,"Herramientas para tu próximo proyecto"))
         if variant=="mobile":
             # color bars bottom
             layer=Image.new("RGBA",(w,h),(0,0,0,0)); d=ImageDraw.Draw(layer)
@@ -117,13 +121,13 @@ def compose(w,h,variant):
             icons.append((cx+math.cos(a)*ring,cy+math.sin(a)*ring,slug,col))
         layer=Image.new("RGBA",(w,h),(0,0,0,0))
         for x,y,slug,col in icons:
-            p=os.path.join(BASE,"assets","icons",slug+".png")
+            p=str(BASE/"assets"/"icons"/(slug+".png"))
             if os.path.isfile(p):
                 ic=Image.open(p).convert("RGBA").resize((int(m*0.062),int(m*0.062)),Image.LANCZOS)
                 layer.alpha_composite(ic,(int(x-ic.width/2),int(y-ic.height/2)))
         img=Image.alpha_composite(img,layer)
         img=Image.alpha_composite(img,mark_layer((w,h),cx,cy,m*0.07))
-        img=Image.alpha_composite(img,text_layer((w,h),cx,h*0.88,m*0.055,"Ocho herramientas. Un kit."))
+        img=Image.alpha_composite(img,text_layer((w,h),cx,h*0.88,m*0.055,"Ocho apps para proyectos distintos"))
     else:  # grid
         layer=Image.new("RGBA",(w,h),(0,0,0,0)); d=ImageDraw.Draw(layer)
         step=max(48,int(m*0.055))
@@ -140,7 +144,7 @@ for w,h,slug,aspect,device in SIZES:
     for variant in ("prism","orbit","grid"):
         img=compose(w,h,variant)
         name="adobado-%s-%s.jpg" % (variant,slug)
-        img.save(os.path.join(OUT,name),quality=92,optimize=True)
+        img.save(str(OUT/name),quality=92,optimize=True)
         manifest["wallpapers"].append({"file":name,"variant":variant,"width":w,"height":h,"aspect":aspect,"devices":[device]})
 # contact sheet 4 variants at 1280x720
 sheet=Image.new("RGB",(2*640+30,2*360+30),(8,10,14))
@@ -148,18 +152,17 @@ for i,variant in enumerate(("prism","orbit","grid")):
     im=compose(1280,720,variant).resize((640,360),Image.LANCZOS)
     x=10+(i%2)*(640+10); y=10+(i//2)*(360+10)
     sheet.paste(im,(x,y))
-sheet.save(os.path.join(OUT,"preview.jpg"),quality=92)
-json.dump(manifest,open(os.path.join(OUT,"manifest.json"),"w",encoding="utf-8"),indent=2)
+sheet.save(str(OUT/"preview.jpg"),quality=92)
+json.dump(manifest,open(OUT/"manifest.json","w",encoding="utf-8"),indent=2)
 
 # installer theme
 wi=compose(164,314,"prism")
-wi.save(os.path.join(THEME,"wizard.bmp"))
+wi.save(str(THEME/"wizard.bmp"))
 sm=Image.new("RGB",(55,55),(11,14,19))
-icon=Image.open(os.path.join(BASE,"launcher","icons","launcher.ico")).convert("RGBA").resize((44,44),Image.LANCZOS)
+icon=Image.open(str(BASE/"launcher"/"launcher.png")).convert("RGBA").resize((44,44),Image.LANCZOS)
 sm.paste(icon,(5,5),icon)
-sm.save(os.path.join(THEME,"wizard-small.bmp"))
-import shutil
-shutil.copy2(os.path.join(BASE,"launcher","launcher.ico"),os.path.join(THEME,"setup.ico"))
-shutil.copy2(os.path.join(BASE,"launcher","launcher.ico"),os.path.join(THEME,"uninstall.ico"))
-compose(1920,1080,"prism").save(os.path.join(THEME,"installer-bg.jpg"),quality=92)
+sm.save(str(THEME/"wizard-small.bmp"))
+shutil.copy2(str(BASE/"launcher"/"launcher.ico"),str(THEME/"setup.ico"))
+shutil.copy2(str(BASE/"launcher"/"launcher.ico"),str(THEME/"uninstall.ico"))
+compose(1920,1080,"prism").save(str(THEME/"installer-bg.jpg"),quality=92)
 print("wallpapers/theme ok", len(manifest["wallpapers"]))

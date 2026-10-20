@@ -1,68 +1,60 @@
 # Identidad visual — Adobado Kit
 
-## Marcas y funciones
+## Una fuente por producto
 
-El kit reúne ocho aplicaciones con iconos propios y conserva una marca independiente para el hub y otra para el launcher. No son variantes intercambiables.
+El pack oficial entregado por @smouj es la fuente de los iconos de Adobado Kit y sus ocho aplicaciones. La sincronización se controla con `python tools/check_brand_assets.py --app-repos-root ../AdobadoRepos`.
 
-| Archivo o familia | Función |
-|---|---|
-| assets/logo.svg | Marca de Adobado Kit: dos formas de color y una barra lima. Se usa en el hub, favicon y documentación del kit. |
-| launcher/launcher.svg y launcher/launcher.ico | Icono del launcher: cuadrícula 3×3 con los ocho colores de la familia y borde lima. |
-| assets/icons/svg/*.svg | Fuente SVG canónica de cada aplicación. |
-| assets/icons/*.png e *.ico | Iconos de producto usados en la tabla del hub y el launcher. |
-| assets/icons/family.png | Vista conjunta de los ocho iconos; es una lámina de familia, no un icono de aplicación o del launcher. |
-| PDF document icon | Icono de tipo de archivo PDF en la interfaz; es intencionalmente distinto del icono de PdfAdobado. |
-
-## Iconos de aplicación
-
-Cada app tiene una identidad visual propia. Dentro de una misma app, el icono debe coincidir en el README, la ficha del hub, la tarjeta del launcher, el ejecutable, los accesos directos y los instaladores.
-
-El PNG e ICO de cada app se sincronizan byte por byte entre el kit y el launcher, y con los archivos de producto del repo de la app. El SVG canónico también coincide con el SVG de aplicación correspondiente. El launcher conserva su cuadrícula 3×3 en launcher/launcher.ico, launcher/icons/launcher.ico y los iconos del instalador.
-
-Comprueba la sincronización desde la raíz del kit:
-
-    python tools/check_brand_assets.py --app-repos-root ../apps
-
-El argumento opcional debe apuntar a una carpeta que contenga los repos PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado y PdfAdobado. El script informa de cada paridad y falla si falta un archivo o difieren sus bytes.
-
-Los binarios de las releases también deben comprobarse después de compilar. Las releases alpha públicas de PhotoAdobado, FilmAdobado y SoundAdobado son anteriores a la identidad visual actual y conservan el icono previo; la actualización del código fuente no modifica un ZIP ya publicado.
-
-## Presentación
-
-- La imagen social del kit parte de una captura real de FilmAdobado en Windows, suavemente desenfocada, con la marca del kit, los ocho iconos y una etiqueta que identifica la captura.
-- Las tarjetas de marca de ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado son piezas de identidad, no capturas de su interfaz. Incluyen el estado de validación actual.
-- No presentar mockups o tarjetas de marca como capturas reales. Mantener texto alternativo descriptivo y captions que identifiquen la app.
-- Los pantallazos de PhotoAdobado, FilmAdobado y SoundAdobado son capturas de aplicación y deben mantenerse separados de la imagen social con desenfoque.
-
-## Paleta
-
-| Token | Hex | Uso |
+| Marca | Recurso | Uso |
 |---|---|---|
-| Ink | #080a0e | Fondo principal |
-| Panel | #11151c | Superficies |
-| Line | #252c37 | Bordes |
-| Text | #eef2f6 | Texto |
-| Muted | #98a3b1 | Texto secundario |
-| Coral | #ff7a59 | Acento cálido |
-| Blue | #6cb6ff | Acento técnico |
-| Lime | #b8f34a | Acción y disponibilidad |
-| Cream | #f2e9dc | Acento editorial |
+| Adobado Kit / launcher | `launcher/launcher.png`, `launcher/launcher.ico` | Launcher, icono de ventana, accesos directos e instalador. El diseño oficial es una baldosa 2×2 de cuatro colores con contorno claro. |
+| Ocho apps | `assets/icons/{photo,art,film,effect,light,sound,design,pdf}.{png,ico}` | Tabla del hub, tarjetas del launcher, accesos directos y recursos de producto. |
+| Apps, render escalable | `assets/icons/svg/*.svg` | Wrapper SVG para los PNG oficiales; conserva compatibilidad con empaquetadores que reciben SVG. La ilustración de origen es raster, no vectorial. |
+| Familia | `assets/icons/family.png` | Composición de ocho iconos de app; no sustituye el icono del launcher ni el de PdfAdobado como tipo de archivo. |
+| PDF | Icono de documento PDF propio de cada interfaz | Identifica el formato de archivo y puede diferir del icono de la aplicación PdfAdobado. |
+
+Los PNG/ICO originales coinciden byte a byte entre Kit, launcher y repos de apps. Las variantes de tamaño de hicolor e ICNS se generan desde el PNG oficial de 1024 px. Los ficheros SVG de Kit y app son idénticos y llevan el PNG de 512 px incrustado para mantener una única imagen de marca.
+
+## Origen y licencia
+
+La obra fue creada y es propiedad de @smouj. El autor autorizó redistribuirla bajo MIT OR Apache-2.0. El inventario está en [`assets/icons/ATTRIBUTION.md`](../assets/icons/ATTRIBUTION.md) y los textos completos en [`assets/icons/LICENSE-MIT.txt`](../assets/icons/LICENSE-MIT.txt) y [`assets/icons/LICENSE-APACHE.txt`](../assets/icons/LICENSE-APACHE.txt). El ZIP se validó con `SHA256SUMS.txt` antes de sincronizarlo.
+
+Para reproducir la sincronización:
+
+    python tools/sync_official_icons.py --pack-dir <directorio-del-pack> --app-repos-root <directorio-con-los-ocho-repos> --apply
+
+El actualizador solo escribe cuando se pasa `--apply`. La comprobación de paridad es de solo lectura y falla si algún icono oficial falta o difiere.
+
+## Capturas y previews
+
+- `assets/social-preview.png` se compone sobre una captura real de FilmAdobado en Windows, suavemente desenfocada y con una capa de marca. Los ocho iconos y el icono del launcher se cargan desde los mismos PNG canónicos.
+- PhotoAdobado, FilmAdobado y SoundAdobado conservan capturas reales de aplicación.
+- ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado usan tarjetas de marca con el estado de validación indicado. No simulan una interfaz.
+- No se debe retocar una captura real para cambiar el icono visible; si una captura histórica lleva un icono previo, se conserva como evidencia de esa versión.
+
+## Paleta de producto
+
+| App | Color oficial |
+|---|---|
+| PhotoAdobado | `#FF5C5C` |
+| ArtAdobado | `#E85AC8` |
+| FilmAdobado | `#FF9F43` |
+| EffectAdobado | `#9B7BFF` |
+| LightAdobado | `#F2C94C` |
+| SoundAdobado | `#35C8D8` |
+| DesignAdobado | `#7BD957` |
+| PdfAdobado | `#4F83E8` |
 
 ## Voz y microcopy
 
-Escribe desde la tarea de la persona y ayúdala a elegir el siguiente paso.
-
-- Abre con acciones concretas: «edita una imagen», «ajusta el color» o «organiza un PDF».
-- Describe funciones confirmadas; no añadas prestaciones para que una ficha suene más completa.
-- Separa compilación, instalación e inicio, y prueba con archivos reales. Indica lo pendiente cerca de cada enlace de descarga.
-- Explica requisitos, formatos y límites cuando influyan en la decisión de uso.
-- Menciona el trabajo local una vez y solo donde esté verificado. Evita repetir «sin nube», «sin suscripciones» o «sin cuentas» como reclamo.
-- Sustituye slogans vagos («abierto de verdad», «una app hace una cosa bien») por datos que la persona pueda comprobar.
-- Español como idioma principal; usa términos técnicos en inglés cuando sean más precisos.
-- No afirmes paridad con otros productos ni uses su identidad visual.
+- Empieza por la tarea de la persona: editar una foto, montar vídeo, preparar audio o revisar un PDF.
+- Describe solo funciones que el repo o una prueba confirmen.
+- Distingue compilación, instalación, inicio y trabajo con archivos reales.
+- Evita slogans genéricos y repetir ventajas obvias. Menciona el procesamiento local una sola vez y donde esté verificado.
+- Mantén los estados de Art, Light, Effect, Design y Pdf como tarjetas de marca mientras no exista una captura validada de su interfaz.
+- Español como idioma principal; conserva nombres técnicos en inglés cuando sean más precisos.
 
 ## Nombres y aviso
 
-Los nombres de producto terminan en Adobado: PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado y PdfAdobado. Los crates pueden conservar los nombres upstream para evitar romper los builds.
+Los nombres de producto son PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado y PdfAdobado. Los crates y ejecutables pueden conservar nombres upstream para no romper los builds.
 
-Adobado Kit es un proyecto independiente y no está afiliado, patrocinado ni respaldado por Adobe. Las marcas de terceros pertenecen a sus titulares y se mencionan solo para describir categorías.
+Adobado Kit es independiente y no está afiliado, patrocinado ni respaldado por Adobe. Las marcas de terceros pertenecen a sus titulares y solo se mencionan para describir categorías.

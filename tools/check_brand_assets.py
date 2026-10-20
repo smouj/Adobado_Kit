@@ -48,6 +48,19 @@ def main() -> int:
     root = args.kit_root.resolve()
     checks: list[str] = []
 
+    checks += check_equal(
+        "launcher PNG and logo lockup",
+        (
+            root / "launcher/launcher.png",
+            root / "launcher/icons/launcher.png",
+            root / "assets/icons/launcher.png",
+        ),
+    )
+    checks += check_equal(
+        "launcher SVG logo lockup",
+        (root / "launcher/launcher.svg", root / "assets/logo.svg"),
+    )
+
     launcher_icons = (
         root / "launcher/launcher.ico",
         root / "launcher/icons/launcher.ico",
@@ -77,14 +90,16 @@ def main() -> int:
                     repos_root / repo / f"assets/app-icon/{icon_svg}",
                 ),
             )
-            checks += check_equal(
-                f"{repo} product PNG",
-                (
-                    root / f"assets/icons/{slug}.png",
-                    repos_root / repo / "assets/adobado/icon.png",
-                    repos_root / repo / f"assets/app-icon/{crate}-1024.png",
-                ),
-            )
+            app_root = repos_root / repo
+            product_png_paths = [
+                root / f"assets/icons/{slug}.png",
+                app_root / "assets/adobado/icon.png",
+                app_root / f"assets/app-icon/{crate}-1024.png",
+            ]
+            for logo in (app_root / "docs/brand/adobado-logo.png", app_root / "docs/brand/adobado-logo-white.png"):
+                if logo.is_file():
+                    product_png_paths.append(logo)
+            checks += check_equal(f"{repo} product PNG and documentation logos", tuple(product_png_paths))
             checks += check_equal(
                 f"{repo} product ICO",
                 (

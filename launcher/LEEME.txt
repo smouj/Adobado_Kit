@@ -1,8 +1,13 @@
-Adobado Kit Launcher
+Adobado Kit Launcher 0.4.0
 
-1. Ejecuta AdobadoLauncher.exe.
-2. Abre las apps instaladas o pulsa Instalar / Ver releases.
-3. Las apps se instalan en D:\AdobadoApps (o en %LOCALAPPDATA%\AdobadoApps si D: no existe).
+Abre una herramienta para continuar con tu tarea. El estado de cada tarjeta indica si su ejecutable está disponible en este equipo.
 
-Instalador sin administrador: ejecuta Instalar-AdobadoKit.cmd.
-El instalador crea accesos directos en el escritorio y en el menu Inicio.
+- Pulsa «Abrir» para iniciar una app instalada.
+- Usa «Ver descargas» para consultar los paquetes publicados por cada proyecto.
+- «Abrir carpeta de apps» muestra D:\AdobadoApps (o %LOCALAPPDATA%\AdobadoApps si D: no existe).
+- «Información del Kit» abre el catálogo y la documentación del proyecto.
+
+Instalación del launcher sin permisos de administrador:
+Ejecuta Instalar-AdobadoKit.cmd. El instalador crea el acceso del Kit en el escritorio y en el menú Inicio.
+
+Versión local: 0.4.0. La versión pública enlazada puede ser distinta; consulta GitHub antes de compartir un paquete.

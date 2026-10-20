@@ -20,8 +20,8 @@ Ocho aplicaciones de escritorio para tareas distintas. Elige por lo que necesita
 
 ## Descargas
 
-- **Launcher + instalador:** [AdobadoKit-Launcher-v0.3.2.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.2/AdobadoKit-Launcher-v0.3.2.zip). Abre o instala las apps, crea accesos directos y no requiere administrador.
-- **Wallpapers:** [AdobadoKit-Wallpapers-v1.0.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.2/AdobadoKit-Wallpapers-v1.0.zip). 33 wallpapers para pantallas 16:9, 21:9, 16:10, 4:3 y móvil.
+- **Launcher + instalador:** [AdobadoKit-Launcher-v0.3.2.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.2/AdobadoKit-Launcher-v0.3.2.zip). Paquete público v0.3.2; su ejecutable aún usa el icono anterior. El instalador no requiere administrador.
+- **Wallpapers:** [AdobadoKit-Wallpapers-v1.0.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.2/AdobadoKit-Wallpapers-v1.0.zip). Paquete público v1.0. Los fondos fuente ya usan la familia oficial; el ZIP publicado aún conserva la versión anterior.
 
 ## Apps
 
@@ -68,13 +68,16 @@ Consulta el historial de compilación y el estado de cada app en [docs/APPS.md](
     ├─ assets/                    # logo, iconos y capturas
     ├─ docs/
     │  ├─ APPS.md                 # catálogo y estado real
+    │  ├─ ADOBADO.md              # launcher, iconos y criterio de uso
     │  ├─ ROADMAP.md
     │  ├─ BRAND.md
     │  └─ UPSTREAM.md             # auditoría de ArtCraft
     ├─ tools/
     │  ├─ check_brand_assets.py   # paridad de iconos
+    │  ├─ sync_official_icons.py # sincronización del pack oficial
     │  ├─ generate_brand_previews.py
     │  ├─ generate_social_preview.py
+    │  ├─ make_wallpapers.py      # fondos y tema desde la marca oficial
     │  ├─ import_apps.py
     │  └─ sync-upstream.sh
     ├─ LICENSE
@@ -86,6 +89,6 @@ El hub es HTML, CSS y JavaScript sin frameworks. Las apps son proyectos Rust ind
 
 ## Licencia
 
-MIT para el código del hub. Cada app conserva las licencias de su upstream. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+MIT para el código del hub; los iconos oficiales del launcher y las apps están bajo MIT OR Apache-2.0, con atribución y textos completos en [assets/icons/ATTRIBUTION.md](assets/icons/ATTRIBUTION.md). Cada app conserva las licencias de su upstream. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Hecho por [SMOUJ013](https://github.com/smouj).
+Hecho por [@smouj](https://github.com/smouj).
