@@ -54,7 +54,7 @@ El nombre interno del crate se conserva para no romper el workspace; el nombre d
 
 Este repo forma parte de Adobado Kit: {kit}
 
-Hecho por SMOUJ013.
+Hecho por @smouj.
 """
 
 ADOBADO_T = """# {name} - procedencia y cambios
@@ -86,7 +86,7 @@ ArtCraft, {product} y sus logos son marcas del ArtCraft Team y no estan cubierto
 
 ## Aviso
 
-Esta es una distribucion modificada. Las modificaciones son de SMOUJ013 (2026). El codigo original conserva sus avisos de copyright y licencia.
+Esta es una distribucion modificada. Las modificaciones son de @smouj (2026). El codigo original conserva sus avisos de copyright y licencia.
 """
 
 CHANGELOG_T = """# Changelog - {name}
@@ -205,7 +205,7 @@ def process(name, upstream, product, sha, tagline, topics):
     notice = os.path.join(dest, "NOTICE")
     if os.path.isfile(notice):
         with open(notice, "a", encoding="utf-8") as f:
-            f.write("\n\nModifications - %s\nThis repository is a modified derivative of %s, maintained by SMOUJ013.\nChanges: product naming, visible branding, help links, README and documentation.\nNo ArtCraft name, wordmark or logo is used in this distribution.\nThe original code remains under its upstream license.\n" % (name, product))
+            f.write("\n\nModifications - %s\nThis repository is a modified derivative of %s, maintained by @smouj.\nChanges: product naming, visible branding, help links, README and documentation.\nNo ArtCraft name, wordmark or logo is used in this distribution.\nThe original code remains under its upstream license.\n" % (name, product))
     # historia propia: un solo commit raiz
     run(["git", "checkout", "-q", "--orphan", "adobado-main"], dest)
     run(["git", "add", "-A"], dest)

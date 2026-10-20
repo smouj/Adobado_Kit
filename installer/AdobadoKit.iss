@@ -1,11 +1,11 @@
 [Setup]
 AppName=Adobado Kit Launcher
-AppVersion=0.3.0
-AppPublisher=SMOUJ013
+AppVersion=0.4.0
+AppPublisher=@smouj
 DefaultDirName={autopf}\Adobado Kit
 DefaultGroupName=Adobado Kit
 OutputDir=output
-OutputBaseFilename=AdobadoKit-Setup
+OutputBaseFilename=AdobadoKit-Setup-v0.4.0
 SetupIconFile=theme\setup.ico
 UninstallDisplayIcon={app}\launcher.ico
 WizardStyle=modern

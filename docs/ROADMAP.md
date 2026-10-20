@@ -2,7 +2,7 @@
 
 ## Estado actual — 20 de octubre de 2026
 
-La versión v0.3.2 del launcher y el pack de wallpapers está publicada. El launcher usa una cuadrícula 3×3 con borde lima; el instalador opcional no requiere permisos de administrador. El pack contiene 33 wallpapers para varios formatos de pantalla.
+La versión pública v0.3.2 del launcher y el pack de wallpapers v1.0 siguen disponibles. La fuente actual ya usa el icono oficial 2×2 de cuatro módulos; los ZIP publicados aún contienen la identidad anterior y deben sustituirse después de validar los nuevos binarios y fondos.
 
 Las ocho apps pasan el workflow de compilación para Windows. PhotoAdobado, FilmAdobado y SoundAdobado se instalaron y abrieron manualmente; cinco apps siguen pendientes de instalación e inicio manual. En las ocho queda pendiente validar un flujo de abrir, modificar y exportar un archivo real.
 
@@ -12,7 +12,7 @@ Hay releases alpha para Photo, Film y Sound. Sus paquetes se generaron antes de 
 
 1. Instalar y abrir ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado en Windows.
 2. Ejecutar una prueba de archivo real de principio a fin en cada aplicación, incluidas Photo, Film y Sound.
-3. Compilar y probar los binarios con los iconos actuales; actualizar las tres releases alpha solo después de validar la identidad integrada y el flujo funcional.
+3. Compilar y probar los binarios con los iconos oficiales; preparar nuevas descargas solo después de validar identidad integrada e instalación. Actualizar releases alpha únicamente tras superar el flujo funcional.
 4. Preparar una primera release para las otras apps solo cuando superen el mismo criterio.
 5. Mantener la documentación, las capturas, los metadatos sociales y la paridad de iconos sincronizados en cada cambio.
 

@@ -21,11 +21,11 @@ DIM = (120, 132, 147)
 LINE = (37, 44, 55)
 
 APPS = (
-    ("ArtAdobado", "art", (230, 82, 194), "Build Windows OK · prueba funcional pendiente"),
-    ("LightAdobado", "light", (245, 210, 76), "Build Windows OK · prueba funcional pendiente"),
-    ("EffectAdobado", "effect", (154, 117, 248), "Build Windows OK · prueba funcional pendiente"),
-    ("DesignAdobado", "design", (134, 223, 78), "Build Windows OK · prueba funcional pendiente"),
-    ("PdfAdobado", "pdf", (91, 141, 239), "Build Windows OK · prueba funcional pendiente"),
+    ("ArtAdobado", "art", (230, 82, 194), "Windows: compilación correcta · uso pendiente"),
+    ("LightAdobado", "light", (245, 210, 76), "Windows: compilación correcta · uso pendiente"),
+    ("EffectAdobado", "effect", (154, 117, 248), "Windows: compilación correcta · uso pendiente"),
+    ("DesignAdobado", "design", (134, 223, 78), "Windows: compilación correcta · uso pendiente"),
+    ("PdfAdobado", "pdf", (79, 131, 232), "Windows: compilación correcta · uso pendiente"),
 )
 
 
@@ -83,10 +83,10 @@ def render(app: str, slug: str, accent: tuple[int, int, int], status: str, icon_
     max_width = WIDTH - text_x - 64
     title_font = fitted_font(app, max_width, 64, True)
     status_font = fitted_font(status, max_width, 34, False)
-    subtitle = "Herramienta creativa local de Adobado Kit"
+    subtitle = "Herramienta de escritorio para crear y editar tus proyectos"
     subtitle_font = fitted_font(subtitle, max_width, 30, False)
-    label1 = "ADOBADO KIT  ·  VISTA PREVIA DE MARCA"
-    label2 = "Tarjeta de marca; no es una captura de la interfaz"
+    label1 = "ADOBADO KIT  ·  IDENTIDAD DE PRODUCTO"
+    label2 = "Vista de marca; la interfaz aún no se ha validado"
     footer_font = fitted_font(label1, 1040, 19, True)
     footer2_font = fitted_font(label2, 1040, 19, False)
 

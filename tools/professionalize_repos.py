@@ -40,7 +40,7 @@ def preview(app, dest, slug, hue, status):
     img.save(os.path.join(dest,"docs","preview.png"))
 
 STAR='[![Stars](https://img.shields.io/github/stars/smouj/%s?style=flat&color=FF5C5C)](https://github.com/smouj/%s/stargazers)'
-SEC='''# Security\n\nReporta vulnerabilidades de forma privada al mantenedor (SMOUJ013) antes de abrirlas en publico.\n\n- Las apps son locales; no hay backend ni telemetria.\n- No se aceptan dependencias que envien archivos a servidores.\n- No se publican binarios sin revisar licencias y procedencia.\n'''
+SEC='''# Security\n\nReporta vulnerabilidades de forma privada al mantenedor (@smouj) antes de abrirlas en publico.\n\n- Las apps son locales; no hay backend ni telemetria.\n- No se aceptan dependencias que envien archivos a servidores.\n- No se publican binarios sin revisar licencias y procedencia.\n'''
 COC='''# Codigo de conducta\n\nEspacio respetuoso y directo.\n\n- Critica tecnica, sin ataques personales.\n- Nada de discriminacion, acoso ni lenguaje hostil.\n- Respeta las licencias y el trabajo de terceros.\n- Los desacuerdos se resuelven con argumentos y pruebas.\n'''
 
 for app,dest,slug,hue,status,has_shot in APPS:

@@ -53,21 +53,15 @@ def crop_cover(source: Image.Image) -> Image.Image:
     return resized.crop((left, top, left + WIDTH, top + HEIGHT))
 
 
-def kit_mark(size: int = 96) -> Image.Image:
-    scale = 4
-    canvas = Image.new("RGBA", (64 * scale, 64 * scale), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(canvas)
-    draw.rounded_rectangle(
-        (2 * scale, 2 * scale, 62 * scale, 62 * scale),
-        radius=16 * scale,
-        fill="#11151c",
-        outline="#2a323e",
-        width=2 * scale,
-    )
-    draw.ellipse((13 * scale, 13 * scale, 37 * scale, 37 * scale), fill=(255, 122, 89, 235))
-    draw.ellipse((28 * scale, 13 * scale, 52 * scale, 37 * scale), fill=(108, 182, 255, 209))
-    draw.rounded_rectangle((14 * scale, 43 * scale, 50 * scale, 51 * scale), radius=4 * scale, fill="#b8f34a")
-    return canvas.resize((size, size), Image.Resampling.LANCZOS)
+def kit_mark(icon_dir: Path, size: int = 92) -> Image.Image:
+    """Load the canonical launcher mark used by the app and installer."""
+    path = icon_dir.parent.parent / "launcher" / "launcher.png"
+    if not path.is_file():
+        raise FileNotFoundError(f"Missing canonical launcher icon: {path}")
+    with Image.open(path) as source:
+        mark = source.convert("RGBA")
+        mark.thumbnail((size, size), Image.Resampling.LANCZOS)
+        return mark.copy()
 
 
 def render(screenshot: Path, icon_dir: Path, output: Path) -> None:
@@ -93,17 +87,17 @@ def render(screenshot: Path, icon_dir: Path, output: Path) -> None:
     background = Image.alpha_composite(background, glow.filter(ImageFilter.GaussianBlur(95)))
     draw = ImageDraw.Draw(background)
 
-    # Main Kit lockup matches assets/logo.svg.
-    mark = kit_mark(92)
+    # Use the same launcher artwork in the banner, hub and Windows launcher.
+    mark = kit_mark(icon_dir, 92)
     background.alpha_composite(mark, (76, 58))
     draw.text((190, 67), "Adobado Kit", font=font(True, 43), fill=TEXT)
-    draw.text((192, 121), "HERRAMIENTAS CREATIVAS LOCALES", font=font(True, 14), fill=LIME)
+    draw.text((192, 121), "HERRAMIENTAS CREATIVAS PARA ESCRITORIO", font=font(True, 14), fill=LIME)
 
-    draw.text((78, 228), "Creatividad", font=font(True, 64), fill=TEXT)
-    draw.text((78, 304), "sin nube.", font=font(True, 64), fill=TEXT)
+    draw.text((78, 228), "Abre tu proyecto.", font=font(True, 64), fill=TEXT)
+    draw.text((78, 304), "Elige tu herramienta.", font=font(True, 64), fill=TEXT)
     draw.text(
         (82, 397),
-        "Ocho apps de escritorio open source para tus archivos.",
+        "Imagen, vídeo, audio, diseño y PDF en apps independientes.",
         font=font(False, 21),
         fill=MUTED,
     )

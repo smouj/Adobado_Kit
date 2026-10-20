@@ -3,18 +3,23 @@
 ## [Unreleased]
 
 ### Corregido
-- Sincronizado el duplicado del icono del launcher con la cuadrícula 3×3 oficial.
+- Sincronizada la familia de iconos del Kit y el launcher con el pack oficial; el icono del launcher usa una cuadrícula 2×2.
 - Alineados los estados de apps, previews y documentación con los builds y pruebas verificadas.
 - Añadida una imagen social basada en una captura real de FilmAdobado.
+- Desactivada la reinstalación directa de paquetes alpha que aún llevan los iconos antiguos.
+- Actualizado el launcher local a 0.4.0 con aurora ambiental animada, rejilla adaptable sin barras de desplazamiento y controles refinados; eliminada la animación de órbitas y la franja fija izquierda de las tarjetas, con acento de marca sutil solo al pasar el cursor.
+- Incrustado el icono oficial del Kit en el ejecutable local y renovados los accesos directos con rutas de icono versionadas para refrescar la caché de Windows.
+- Calculados el tamaño y la cuadrícula sobre el monitor de inicio; limitada la copia del fondo animado al área visible y corregida la licencia de los iconos con atribución a @smouj.
 
 ### Documentado
 - Se explican las marcas distintas del kit, launcher y apps, y el criterio de paridad por bytes.
 - Se añade una herramienta para comprobar iconos entre el hub, launcher y los ocho repos de apps.
+- La compilación 0.4.0 es local; la descarga pública enlazada sigue siendo v0.3.2 hasta publicar una release verificada.
 
 ## [0.3.2] — 2026-10-20
 
 ### Añadido
-- Launcher para Windows con icono 3×3 y borde lima, instalador opcional sin privilegios de administrador y pack de 33 wallpapers.
+- Launcher para Windows, instalador opcional sin privilegios de administrador y pack de 33 wallpapers.
 
 
 ## [0.2.0] — 2026-10-20
