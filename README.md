@@ -2,17 +2,14 @@
 
 <p align="center"><img src="assets/logo.svg" width="96" alt="Adobado Kit"></p>
 
-**Herramientas creativas locales, sin suscripciones y sin nube.**
+**Foto, vídeo, ilustración, efectos, color, audio, diseño y PDF: elige una app según tu tarea.**
 
 [![Stars](https://img.shields.io/github/stars/smouj/Adobado_Kit?style=flat&color=B8F34A)](https://github.com/smouj/Adobado_Kit/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-b8f34a)](LICENSE)
 [![Versión](https://img.shields.io/badge/version-v0.3.2-6cb6ff)](https://github.com/smouj/Adobado_Kit/releases/tag/v0.3.2)
 [![Descargas](https://img.shields.io/github/downloads/smouj/Adobado_Kit/total?color=B8F34A)](https://github.com/smouj/Adobado_Kit/releases)
-[![Local-first](https://img.shields.io/badge/privacy-100%25%20local-b8f34a)](#principios)
-[![Open source](https://img.shields.io/badge/open%20source-yes-6cb6ff)](docs/APPS.md)
-[![Apps](https://img.shields.io/badge/apps-8-6cb6ff)](#apps)
 
-Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en tu equipo. Cada app es un repo independiente, funciona sin conexión y no pide cuentas.
+Ocho aplicaciones de escritorio para tareas distintas. Elige por lo que necesitas hacer y consulta qué se ha compilado, instalado y probado antes de descargar.
 
 > **Adobado Kit no está afiliado a Adobe.** Es un proyecto personal e independiente. Los nombres de productos se usan solo para describir categorías de herramientas.
 
@@ -28,40 +25,39 @@ Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en 
 
 ## Apps
 
-| App | Qué hace | Estado |
+| App | Para qué sirve | Estado de las pruebas |
 |---|---|---|
-| <img src="assets/icons/photo.png" width="30" alt="Icono de PhotoAdobado"> [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft. | Instalada y abierta en Windows · archivo real pendiente |
-| <img src="assets/icons/art.png" width="30" alt="Icono de ArtAdobado"> [ArtAdobado](https://github.com/smouj/ArtAdobado) | Arte vectorial y SVG local. Derivado de VectorCraft. | Build Windows OK · instalación y apertura pendientes |
-| <img src="assets/icons/film.png" width="30" alt="Icono de FilmAdobado"> [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edición de vídeo local. Derivado de FilmCraft. | Instalada y abierta en Windows · archivo real pendiente |
-| <img src="assets/icons/effect.png" width="30" alt="Icono de EffectAdobado"> [EffectAdobado](https://github.com/smouj/EffectAdobado) | Efectos visuales locales. Derivado de EffectCraft. | Build Windows OK · instalación y apertura pendientes |
-| <img src="assets/icons/light.png" width="30" alt="Icono de LightAdobado"> [LightAdobado](https://github.com/smouj/LightAdobado) | Revelado y color local. Derivado de LightCraft. | Build Windows OK · instalación y apertura pendientes |
-| <img src="assets/icons/sound.png" width="30" alt="Icono de SoundAdobado"> [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edición de audio local. Derivado de SoundCraft. | Instalada y abierta en Windows · archivo real pendiente |
-| <img src="assets/icons/design.png" width="30" alt="Icono de DesignAdobado"> [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseño y composición local. Derivado de DesignCraft. | Build Windows OK · instalación y apertura pendientes |
-| <img src="assets/icons/pdf.png" width="30" alt="Icono de PdfAdobado"> [PdfAdobado](https://github.com/smouj/PdfAdobado) | PDF local: lectura, edición y organización. Derivado de PdfCraft. | Build Windows OK · instalación y apertura pendientes |
+| <img src="assets/icons/photo.png" width="30" alt="Icono de PhotoAdobado"> [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Edita imágenes con capas, máscaras, PSD y ajustes. | Inicio comprobado en Windows · falta validar un archivo |
+| <img src="assets/icons/art.png" width="30" alt="Icono de ArtAdobado"> [ArtAdobado](https://github.com/smouj/ArtAdobado) | Crea ilustraciones vectoriales y trabaja con archivos SVG. | Compilación correcta · falta instalar y abrir |
+| <img src="assets/icons/film.png" width="30" alt="Icono de FilmAdobado"> [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edita tus proyectos de vídeo. | Inicio comprobado en Windows · falta validar un archivo |
+| <img src="assets/icons/effect.png" width="30" alt="Icono de EffectAdobado"> [EffectAdobado](https://github.com/smouj/EffectAdobado) | Aplica efectos visuales a tus proyectos. | Compilación correcta · falta instalar y abrir |
+| <img src="assets/icons/light.png" width="30" alt="Icono de LightAdobado"> [LightAdobado](https://github.com/smouj/LightAdobado) | Revela fotografías y ajusta el color. | Compilación correcta · falta instalar y abrir |
+| <img src="assets/icons/sound.png" width="30" alt="Icono de SoundAdobado"> [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edita tus pistas de audio. | Inicio comprobado en Windows · falta validar un archivo |
+| <img src="assets/icons/design.png" width="30" alt="Icono de DesignAdobado"> [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseña y compón piezas gráficas. | Compilación correcta · falta instalar y abrir |
+| <img src="assets/icons/pdf.png" width="30" alt="Icono de PdfAdobado"> [PdfAdobado](https://github.com/smouj/PdfAdobado) | Lee, edita y organiza documentos PDF. | Compilación correcta · falta instalar y abrir |
 
 El catálogo con commits, licencias y estado real está en [docs/APPS.md](docs/APPS.md).
 
 ## Estado
 
-Los ocho repos registran un build de Windows correcto en GitHub Actions (20 de octubre de 2026). Un build automatizado confirma la compilación; no sustituye la prueba manual.
+Los ocho proyectos compilan para Windows (20 de octubre de 2026). Una compilación correcta no confirma que la app se instale, se inicie o funcione con tus archivos.
 
-- **PhotoAdobado, FilmAdobado y SoundAdobado:** instaladas y abiertas en Windows. Abrir, modificar y exportar un archivo real sigue pendiente.
-- **ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado:** build correcto; instalar e iniciar manualmente sigue pendiente.
-- Solo Photo, Film y Sound tienen una release pública (v0.1.0-alpha.1). Sus ZIP se publicaron antes del icono actual y conservan la identidad anterior. Se actualizarán cuando el nuevo binario se haya comprobado en Windows.
-- Las otras cinco apps aún no tienen release. Ninguna se marca como disponible hasta completar las pruebas funcionales.
+- **PhotoAdobado, FilmAdobado y SoundAdobado:** instaladas y abiertas en Windows; falta completar una prueba con un archivo real.
+- **ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado:** compilación correcta; todavía falta instalarlas y abrirlas manualmente.
+- Las descargas alpha de Photo, Film y Sound conservan el icono anterior y no han completado una prueba con un archivo real. Art, Light, Effect, Design y Pdf aún no tienen un paquete público.
 
-Consulta los workflows y el estado detallado en [docs/APPS.md](docs/APPS.md).
+Consulta el historial de compilación y el estado de cada app en [docs/APPS.md](docs/APPS.md).
 
-## Principios
+## Antes de usar
 
-1. **Local primero.** Tus archivos no salen del equipo. Sin cuentas, servidores ni telemetría.
-2. **Abierto de verdad.** Código MIT/Apache, dependencias auditables y formatos estándar.
-3. **Herramientas honestas.** Cada app dice qué hace, qué no hace y en qué estado está.
+1. **Archivos en tu equipo.** Las apps son de escritorio y procesan los archivos localmente; no necesitas una cuenta.
+2. **Formatos y licencias.** Consulta en el repositorio de cada app los formatos admitidos, su licencia y los avisos de terceros.
+3. **Estado de uso.** Separamos compilación, inicio en Windows y prueba completa con un archivo para que sepas qué está verificado.
 
 ## Uso
 
 - Abre el hub en [index.html](index.html) o en https://smouj.github.io/Adobado_Kit/.
-- El [launcher v0.3.2](https://github.com/smouj/Adobado_Kit/releases/tag/v0.3.2) incluye un instalador opcional sin privilegios de administrador.
+- El [launcher v0.3.2](https://github.com/smouj/Adobado_Kit/releases/tag/v0.3.2) incluye un instalador opcional que no requiere permisos de administrador.
 - El pack de wallpapers contiene 33 fondos adaptados a varios dispositivos.
 - El hub es HTML estático; las apps se mantienen y se compilan en sus repositorios independientes.
 
