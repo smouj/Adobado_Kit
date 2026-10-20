@@ -69,6 +69,14 @@ class Launcher {
         sub.Location = new Point(30, 64);
         form.Controls.Add(sub);
 
+        PictureBox headerLogo = new PictureBox();
+        headerLogo.Size = new Size(44, 44);
+        headerLogo.Location = new Point(26, 14);
+        headerLogo.SizeMode = PictureBoxSizeMode.Zoom;
+        try { headerLogo.Image = Image.FromFile(Path.Combine(Application.StartupPath, "launcher.png")); } catch { try { headerLogo.Image = new Icon(Path.Combine(Application.StartupPath, "launcher.ico")).ToBitmap(); } catch {} }
+        form.Controls.Add(headerLogo);
+        title.Location = new Point(82, 18);
+
         FlowLayoutPanel flow = new FlowLayoutPanel();
         flow.Location = new Point(20, 96);
         flow.Size = new Size(990, 640);
@@ -77,6 +85,13 @@ class Launcher {
         form.Controls.Add(flow);
 
         foreach (AppInfo app in apps) {
+            if (app.Name == "DesignAdobado") {
+                Panel spacer = new Panel();
+                spacer.Size = new Size(312, 190);
+                spacer.Margin = new Padding(8);
+                spacer.BackColor = Color.FromArgb(11, 14, 19);
+                flow.Controls.Add(spacer);
+            }
             flow.Controls.Add(BuildCard(app));
         }
 

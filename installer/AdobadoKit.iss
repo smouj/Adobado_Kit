@@ -19,6 +19,7 @@ PrivilegesRequired=lowest
 [Files]
 Source: "launcher\AdobadoLauncher.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "launcher\launcher.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "launcher\launcher.png"; DestDir: "{app}"; Flags: ignoreversion
 Source: "launcher\icons\*"; DestDir: "{app}\icons"; Flags: ignoreversion recursesubdirs
 Source: "theme\*"; DestDir: "{app}\theme"; Flags: ignoreversion recursesubdirs
 
