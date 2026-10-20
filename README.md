@@ -27,24 +27,22 @@ Ocho aplicaciones de escritorio para tareas distintas. Elige por lo que necesita
 
 | App | Para qué sirve | Estado de las pruebas |
 |---|---|---|
-| <img src="assets/icons/photo.png" width="30" alt="Icono de PhotoAdobado"> [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Edita imágenes con capas, máscaras, PSD y ajustes. | Inicio comprobado en Windows · falta validar un archivo |
-| <img src="assets/icons/art.png" width="30" alt="Icono de ArtAdobado"> [ArtAdobado](https://github.com/smouj/ArtAdobado) | Crea ilustraciones vectoriales y trabaja con archivos SVG. | Compilación correcta · falta instalar y abrir |
-| <img src="assets/icons/film.png" width="30" alt="Icono de FilmAdobado"> [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edita tus proyectos de vídeo. | Inicio comprobado en Windows · falta validar un archivo |
-| <img src="assets/icons/effect.png" width="30" alt="Icono de EffectAdobado"> [EffectAdobado](https://github.com/smouj/EffectAdobado) | Aplica efectos visuales a tus proyectos. | Compilación correcta · falta instalar y abrir |
-| <img src="assets/icons/light.png" width="30" alt="Icono de LightAdobado"> [LightAdobado](https://github.com/smouj/LightAdobado) | Revela fotografías y ajusta el color. | Compilación correcta · falta instalar y abrir |
-| <img src="assets/icons/sound.png" width="30" alt="Icono de SoundAdobado"> [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edita tus pistas de audio. | Inicio comprobado en Windows · falta validar un archivo |
-| <img src="assets/icons/design.png" width="30" alt="Icono de DesignAdobado"> [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseña y compón piezas gráficas. | Compilación correcta · falta instalar y abrir |
-| <img src="assets/icons/pdf.png" width="30" alt="Icono de PdfAdobado"> [PdfAdobado](https://github.com/smouj/PdfAdobado) | Lee, edita y organiza documentos PDF. | Compilación correcta · falta instalar y abrir |
+| <img src="assets/icons/photo.png" width="30" alt="Icono de PhotoAdobado"> [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Edita imágenes con capas, máscaras, PSD y ajustes. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/art.png" width="30" alt="Icono de ArtAdobado"> [ArtAdobado](https://github.com/smouj/ArtAdobado) | Crea ilustraciones vectoriales y trabaja con archivos SVG. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/film.png" width="30" alt="Icono de FilmAdobado"> [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edita tus proyectos de vídeo. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/effect.png" width="30" alt="Icono de EffectAdobado"> [EffectAdobado](https://github.com/smouj/EffectAdobado) | Aplica efectos visuales a tus proyectos. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/light.png" width="30" alt="Icono de LightAdobado"> [LightAdobado](https://github.com/smouj/LightAdobado) | Revela fotografías y ajusta el color. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/sound.png" width="30" alt="Icono de SoundAdobado"> [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edita tus pistas de audio. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/design.png" width="30" alt="Icono de DesignAdobado"> [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseña y compón piezas gráficas. | Inicio comprobado en Windows · falta probar un archivo real |
+| <img src="assets/icons/pdf.png" width="30" alt="Icono de PdfAdobado"> [PdfAdobado](https://github.com/smouj/PdfAdobado) | Lee, edita y organiza documentos PDF. | Inicio comprobado en Windows · falta probar un archivo real |
 
 Consulta el [catálogo de apps](docs/APPS.md) para ver el estado de las pruebas, las descargas y las licencias.
 
 ## Estado
 
-Los ocho proyectos compilan para Windows (20 de octubre de 2026). Una compilación correcta no confirma que la app se instale, se inicie o funcione con tus archivos.
+Los ocho binarios de Windows se compilaron, instalaron y abrieron en este equipo (21 de octubre de 2026). Las pruebas con archivos reales siguen pendientes para todas las apps, así que el estado verificado se limita al arranque.
 
-- **PhotoAdobado, FilmAdobado y SoundAdobado:** instaladas y abiertas en Windows; falta completar una prueba con un archivo real.
-- **ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado:** compilación correcta; todavía falta instalarlas y abrirlas manualmente.
-- Las descargas alpha de Photo, Film y Sound conservan el icono anterior y no han completado una prueba con un archivo real. Art, Light, Effect, Design y Pdf aún no tienen un paquete público.
+Los ZIP alpha públicos de Photo, Film y Sound conservan los iconos anteriores. Art, Light, Effect, Design y Pdf todavía no tienen paquetes de descarga públicos.
 
 Consulta el historial de compilación y el estado de cada app en [docs/APPS.md](docs/APPS.md).
 

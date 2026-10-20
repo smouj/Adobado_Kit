@@ -5,6 +5,7 @@
 ### Corregido
 - Sincronizada la familia de iconos del Kit y el launcher con el pack oficial; el icono del launcher usa una cuadrícula 2×2.
 - Alineados los estados de apps, previews y documentación con los builds y pruebas verificadas.
+- Verificados en Windows los ocho binarios instalados; queda pendiente probar los flujos con archivos reales.
 - Añadida una imagen social basada en una captura real de FilmAdobado.
 - Desactivada la reinstalación directa de paquetes alpha que aún llevan los iconos antiguos.
 - Actualizado el launcher local a 0.4.0 con aurora ambiental animada, rejilla adaptable sin barras de desplazamiento y controles refinados; eliminada la animación de órbitas y la franja fija izquierda de las tarjetas, con acento de marca sutil solo al pasar el cursor.
