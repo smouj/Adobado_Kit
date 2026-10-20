@@ -14,8 +14,8 @@ Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en 
 
 ## Descargas
 
-- **Launcher + instalador:** [AdobadoKit-Launcher-v0.3.1.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.1/AdobadoKit-Launcher-v0.3.1.zip). Abre o instala las apps, crea accesos directos y no requiere administrador.
-- **Wallpapers:** [AdobadoKit-Wallpapers-v1.0.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.1/AdobadoKit-Wallpapers-v1.0.zip). Tres variantes en 16:9, 21:9, 16:10, 4:3 y móvil.
+- **Launcher + instalador:** [AdobadoKit-Launcher-v0.3.2.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.2/AdobadoKit-Launcher-v0.3.2.zip). Abre o instala las apps, crea accesos directos y no requiere administrador.
+- **Wallpapers:** [AdobadoKit-Wallpapers-v1.0.zip](https://github.com/smouj/Adobado_Kit/releases/download/v0.3.2/AdobadoKit-Wallpapers-v1.0.zip). Tres variantes en 16:9, 21:9, 16:10, 4:3 y móvil.
 
 ## Apps
 
