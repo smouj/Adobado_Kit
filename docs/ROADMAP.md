@@ -1,79 +1,33 @@
 # Roadmap — Adobado Kit
 
-El kit crece por herramientas completas, no por promesas. Una app pasa a `Disponible` cuando abre, edita y exporta de verdad, sin depender de la nube.
+## Estado actual — 20 de octubre de 2026
 
-## v0.1.0 — Hub y primeras apps
+La versión v0.3.2 del launcher y el pack de wallpapers está publicada. El launcher usa una cuadrícula 3×3 con borde lima; el instalador opcional no requiere permisos de administrador. El pack contiene 33 wallpapers para varios formatos de pantalla.
 
-- Hub de Adobado Kit con landing, catálogo y enlaces.
-- Markdown Studio v1.0.0.
-- XLSX Viewer v1.0.0.
-- Marca, licencias y documentación.
+Las ocho apps pasan el workflow de compilación para Windows. PhotoAdobado, FilmAdobado y SoundAdobado se instalaron y abrieron manualmente; cinco apps siguen pendientes de instalación e inicio manual. En las ocho queda pendiente validar un flujo de abrir, modificar y exportar un archivo real.
 
-## v0.2.0 — Ocho repos standalone
+Hay releases alpha para Photo, Film y Sound. Sus paquetes se generaron antes de la actualización de iconos y conservan la identidad anterior. Art, Light, Effect, Design y Pdf todavía no tienen releases. Los estados detallados y los enlaces a Actions están en [APPS.md](APPS.md).
 
-- Hub solo con apps Adobado; Markdown Studio y XLSX Viewer salen del kit.
-- Repos standalone, no forks: PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado, PdfAdobado.
-- Rebranding visible, licencias y docs/ADOBADO.md en cada repo.
-- Estado Alpha: builds de Windows y pruebas de edición pendientes.
-- PdfAdobado: reintentar la creación del repo si GitHub aplica su límite temporal.
+## Siguientes pasos
 
-## v0.2.1 — PhotoAdobado
+1. Instalar y abrir ArtAdobado, LightAdobado, EffectAdobado, DesignAdobado y PdfAdobado en Windows.
+2. Ejecutar una prueba de archivo real de principio a fin en cada aplicación, incluidas Photo, Film y Sound.
+3. Compilar y probar los binarios con los iconos actuales; actualizar las tres releases alpha solo después de validar la identidad integrada y el flujo funcional.
+4. Preparar una primera release para las otras apps solo cuando superen el mismo criterio.
+5. Mantener la documentación, las capturas, los metadatos sociales y la paridad de iconos sincronizados en cada cambio.
 
-- Build de Windows y prueba abrir -> editar -> exportar.
-- Iconos definitivos y release solo con binario probado.
+## Criterio para cerrar una app
 
-## v0.3.0 — ArtAdobado
+- Build correcto para Windows.
+- Instalación e inicio manual comprobados.
+- Flujo de abrir, modificar y exportar comprobado con un archivo real.
+- Icono del binario igual al oficial de la app.
+- Licencias, avisos, captura, README y changelog revisados.
+- Release con versión, artefacto y notas coincidentes.
 
-- Lienzo SVG con zoom y cuadrícula.
-- Formas, trazos, texto y edición de nodos.
-- Importar/exportar SVG limpio.
-- Sin efectos rasterizados en la primera versión.
+## Principios del proyecto
 
-## v0.4.0 — FilmAdobado
-
-- Importar vídeo local y timeline.
-- Corte, orden y subtítulos.
-- Exportación local (WebCodecs o ffmpeg opcional).
-- Sin streaming ni subida de archivos.
-
-## v0.5.0 — SoundAdobado
-
-- Forma de onda y selección.
-- Corte, normalización y fundidos.
-- Exportación WAV/MP3.
-- Sin bibliotecas en la nube.
-
-## v0.6.0 — PdfAdobado
-
-- Unir, separar, rotar y reordenar PDF.
-- Composición básica de páginas.
-- Exportación local.
-- Sin firma digital en la primera versión.
-
-## v0.7.0 — LightAdobado
-
-- Revelado RAW cuando sea viable, empezando por JPEG/PNG.
-- Curvas, temperatura, exposición y color.
-- Exportación con perfiles básicos.
-
-## Licencias y marcas
-
-- El código upstream es MIT/Apache-2.0 y permite derivados con avisos.
-- Los nombres, wordmarks y logos de ArtCraft son trademarks y no están licenciados: se eliminan de las builds.
-- Adobe y sus productos son marcas de Adobe Inc. El kit no está afiliado.
-- Cada app derivada debe documentar su commit de origen y sus cambios.
-
-## Fuera de alcance
-
-- Cuentas, suscripciones y telemetría.
-- Procesamiento en servidores propios.
-- Formatos propietarios cerrados sin librería libre verificable.
-- Prometer paridad con productos comerciales: el objetivo es resolver tareas reales, no clonar menús.
-
-## Cómo se cierra una app
-
-1. Implementación local con contrato claro.
-2. Prueba manual de abrir → editar → exportar.
-3. Licencias y créditos revisados.
-4. Documentación y captura actualizada.
-5. Release con versión y changelog.
+- Local primero: sin cuentas, telemetría ni procesamiento en servidores propios.
+- Formatos estándar y dependencias con licencias documentadas.
+- Las tarjetas de marca no se presentan como capturas de interfaz.
+- Sin promesas de paridad con productos comerciales.

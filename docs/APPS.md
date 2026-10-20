@@ -1,26 +1,27 @@
 # Apps de Adobado Kit
 
-Ocho apps, ocho repos standalone. Ninguna se marca como disponible hasta que compila en Windows y abre, edita y exporta un archivo real.
+Estado verificado el 20 de octubre de 2026. Los ocho workflows de Windows han terminado correctamente. Un build verde demuestra que compila en CI; no demuestra que la aplicación se haya instalado, iniciado o usado con un archivo real.
 
-| App | Repo | Estado | Upstream | Commit base |
-|---|---|---|---|---|
-| PhotoAdobado | https://github.com/smouj/PhotoAdobado | Build OK · probada en Windows | PhotoCraft (MIT OR Apache-2.0) | 03d0c7e |
-| ArtAdobado | https://github.com/smouj/ArtAdobado | Alpha · build pendiente | VectorCraft (MIT OR Apache-2.0) | 9e7929e |
-| FilmAdobado | https://github.com/smouj/FilmAdobado | Build OK · probada en Windows | FilmCraft (MIT OR Apache-2.0) | fb4cbda |
-| EffectAdobado | https://github.com/smouj/EffectAdobado | Build OK · artifact pendiente | EffectCraft (MIT OR Apache-2.0) | ef74d82 |
-| LightAdobado | https://github.com/smouj/LightAdobado | Build OK · artifact pendiente | LightCraft (MIT OR Apache-2.0) | d999e38 |
-| SoundAdobado | https://github.com/smouj/SoundAdobado | Build OK · probada en Windows | SoundCraft (MIT OR Apache-2.0) | 25d52c6 |
-| DesignAdobado | https://github.com/smouj/DesignAdobado | Build OK · artifact pendiente | DesignCraft (MIT OR Apache-2.0) | 443ea46 |
-| PdfAdobado | https://github.com/smouj/PdfAdobado | Repo creado · build en curso | PdfCraft (MIT OR Apache-2.0) | ec0a965 |
+| App | Repo | Build Windows | Prueba manual | Release | Upstream | Commit base |
+|---|---|---|---|---|---|---|
+| PhotoAdobado | [repo](https://github.com/smouj/PhotoAdobado) | [Correcto](https://github.com/smouj/PhotoAdobado/actions/workflows/windows-build.yml) | Instalada y abierta; archivo real pendiente | [v0.1.0-alpha.1](https://github.com/smouj/PhotoAdobado/releases/tag/v0.1.0-alpha.1) · icono anterior | PhotoCraft (MIT OR Apache-2.0) | 03d0c7e |
+| ArtAdobado | [repo](https://github.com/smouj/ArtAdobado) | [Correcto](https://github.com/smouj/ArtAdobado/actions/workflows/windows-build.yml) | Instalar, iniciar y flujo de archivo pendientes | Sin release | VectorCraft (MIT OR Apache-2.0) | 9e7929e |
+| FilmAdobado | [repo](https://github.com/smouj/FilmAdobado) | [Correcto](https://github.com/smouj/FilmAdobado/actions/workflows/windows-build.yml) | Instalada y abierta; archivo real pendiente | [v0.1.0-alpha.1](https://github.com/smouj/FilmAdobado/releases/tag/v0.1.0-alpha.1) · icono anterior | FilmCraft (MIT OR Apache-2.0) | fb4cbda |
+| EffectAdobado | [repo](https://github.com/smouj/EffectAdobado) | [Correcto](https://github.com/smouj/EffectAdobado/actions/workflows/windows-build.yml) | Instalar, iniciar y flujo de archivo pendientes | Sin release | EffectCraft (MIT OR Apache-2.0) | ef74d82 |
+| LightAdobado | [repo](https://github.com/smouj/LightAdobado) | [Correcto](https://github.com/smouj/LightAdobado/actions/workflows/windows-build.yml) | Instalar, iniciar y flujo de archivo pendientes | Sin release | LightCraft (MIT OR Apache-2.0) | d999e38 |
+| SoundAdobado | [repo](https://github.com/smouj/SoundAdobado) | [Correcto](https://github.com/smouj/SoundAdobado/actions/workflows/windows-build.yml) | Instalada y abierta; archivo real pendiente | [v0.1.0-alpha.1](https://github.com/smouj/SoundAdobado/releases/tag/v0.1.0-alpha.1) · icono anterior | SoundCraft (MIT OR Apache-2.0) | 25d52c6 |
+| DesignAdobado | [repo](https://github.com/smouj/DesignAdobado) | [Correcto](https://github.com/smouj/DesignAdobado/actions/workflows/windows-build.yml) | Instalar, iniciar y flujo de archivo pendientes | Sin release | DesignCraft (MIT OR Apache-2.0) | 443ea46 |
+| PdfAdobado | [repo](https://github.com/smouj/PdfAdobado) | [Correcto](https://github.com/smouj/PdfAdobado/actions/workflows/windows-build.yml) | Instalar, iniciar y flujo de archivo pendientes | Sin release | PdfCraft (MIT OR Apache-2.0) | ec0a965 |
 
-## Regla de publicación
+## Criterio de publicación
 
-Un repo se considera listo cuando:
+Una release se publica después de verificar todos estos puntos:
 
-1. Tiene README, licencia, aviso de procedencia y changelog.
-2. Compila en Windows y abre sin errores.
-3. Abre, edita y exporta un archivo real.
-4. No usa marcas de ArtCraft ni de Adobe.
-5. Está enlazado desde Adobado Kit con su estado real.
+1. La compilación para Windows termina correctamente.
+2. El binario actualizado se instala y abre en un equipo Windows.
+3. El icono integrado en el ejecutable coincide con el icono oficial de la app.
+4. Se abre, modifica y exporta un archivo de prueba apropiado para la app.
+5. Los avisos de licencia, procedencia y marcas están presentes.
+6. README, captura, changelog y artefacto de descarga describen la misma versión.
 
-Hasta entonces, el estado es Alpha. No se publican binarios sin prueba.
+Las tres releases alpha existentes se publicaron antes de la actualización de iconos; sus ZIP conservan el icono anterior. Las cinco apps restantes no tienen release pública. Los artefactos de Actions son temporales y no sustituyen una release verificada.

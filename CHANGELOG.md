@@ -1,5 +1,22 @@
 # Changelog — Adobado Kit
 
+## [Unreleased]
+
+### Corregido
+- Sincronizado el duplicado del icono del launcher con la cuadrícula 3×3 oficial.
+- Alineados los estados de apps, previews y documentación con los builds y pruebas verificadas.
+- Añadida una imagen social basada en una captura real de FilmAdobado.
+
+### Documentado
+- Se explican las marcas distintas del kit, launcher y apps, y el criterio de paridad por bytes.
+- Se añade una herramienta para comprobar iconos entre el hub, launcher y los ocho repos de apps.
+
+## [0.3.2] — 2026-10-20
+
+### Añadido
+- Launcher para Windows con icono 3×3 y borde lima, instalador opcional sin privilegios de administrador y pack de 33 wallpapers.
+
+
 ## [0.2.0] — 2026-10-20
 
 ### Cambiado
