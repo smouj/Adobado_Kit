@@ -1,5 +1,15 @@
 # Changelog — Adobado Kit
 
+## [Unreleased]
+
+### Añadido
+- Auditoría de ArtCraft con licencias, commits fijados y restricciones de marca.
+- Documento docs/UPSTREAM.md y script tools/sync-upstream.sh.
+- Nota de afiliación y política de derivados en el README y el roadmap.
+
+### Notas
+- Ninguna app derivada se presenta como disponible todavía.
+
 ## [0.1.0] — 2026-10-20
 
 ### Añadido

@@ -34,6 +34,12 @@ Abre el hub en [`index.html`](index.html) o entra directamente en cada app.
 
 El detalle y el orden están en [docs/ROADMAP.md](docs/ROADMAP.md). No hay fechas infladas: cada herramienta se publica cuando es útil.
 
+## Upstream: ArtCraft
+
+Las futuras apps de categoría Adobe se construirán como derivados de [ArtCraft](https://github.com/storytold) (MIT/Apache-2.0), con commits fijados, avisos conservados y rebranding propio. La marca, el wordmark y los logos de ArtCraft son trademarks y no se usan en este kit.
+
+Estado actual: auditoría y pipeline de sincronización listos; **ninguna app derivada se presenta como disponible**. El detalle legal y técnico está en [docs/UPSTREAM.md](docs/UPSTREAM.md).
+
 ## Principios
 
 1. **Local primero.** Tus archivos no salen del equipo. Sin cuentas, servidores ni telemetría.

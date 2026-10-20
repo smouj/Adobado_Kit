@@ -11,11 +11,11 @@ El kit crece por herramientas completas, no por promesas. Una app pasa a `Dispon
 
 ## v0.2.0 — Adobado Photo
 
-- Abrir imágenes locales (PNG, JPEG, WebP).
-- Recorte, rotación y escala.
-- Brillo, contraste, saturación y nitidez.
-- Exportación PNG/JPEG/WebP con control de calidad.
-- Sin capas en la primera versión; se añadirán después.
+- Fork derivado de PhotoCraft (MIT OR Apache-2.0) con commit fijado.
+- Rebranding completo: nombre, ventana, iconos, about y assets; sin marcas de ArtCraft.
+- Conservar LICENSE-MIT, LICENSE-APACHE, NOTICE y ATTRIBUTION.md; añadir ADOBADO.md.
+- Build de Windows y prueba abrir → editar → exportar.
+- Solo entonces se marca como disponible. PhotoCraft es alpha upstream: no se presenta como sustituto profesional.
 
 ## v0.3.0 — Adobado Vector
 
@@ -50,6 +50,13 @@ El kit crece por herramientas completas, no por promesas. Una app pasa a `Dispon
 - Revelado RAW cuando sea viable, empezando por JPEG/PNG.
 - Curvas, temperatura, exposición y color.
 - Exportación con perfiles básicos.
+
+## Licencias y marcas
+
+- El código upstream es MIT/Apache-2.0 y permite derivados con avisos.
+- Los nombres, wordmarks y logos de ArtCraft son trademarks y no están licenciados: se eliminan de las builds.
+- Adobe y sus productos son marcas de Adobe Inc. El kit no está afiliado.
+- Cada app derivada debe documentar su commit de origen y sus cambios.
 
 ## Fuera de alcance
 
