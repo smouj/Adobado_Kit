@@ -36,7 +36,7 @@ Ocho aplicaciones de escritorio para tareas distintas. Elige por lo que necesita
 | <img src="assets/icons/design.png" width="30" alt="Icono de DesignAdobado"> [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseña y compón piezas gráficas. | Compilación correcta · falta instalar y abrir |
 | <img src="assets/icons/pdf.png" width="30" alt="Icono de PdfAdobado"> [PdfAdobado](https://github.com/smouj/PdfAdobado) | Lee, edita y organiza documentos PDF. | Compilación correcta · falta instalar y abrir |
 
-El catálogo con commits, licencias y estado real está en [docs/APPS.md](docs/APPS.md).
+Consulta el [catálogo de apps](docs/APPS.md) para ver el estado de las pruebas, las descargas y las licencias.
 
 ## Estado
 
