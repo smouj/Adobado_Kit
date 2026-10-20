@@ -48,12 +48,18 @@ Los binarios de las releases también deben comprobarse después de compilar. La
 | Lime | #b8f34a | Acción y disponibilidad |
 | Cream | #f2e9dc | Acento editorial |
 
-## Voz
+## Voz y microcopy
 
-- Directa, técnica y sin hype.
-- Español como idioma principal; términos técnicos en inglés cuando ayudan a la precisión.
-- Cada app describe lo que hace y su etapa real.
-- No afirmar paridad con otros productos ni usar su identidad visual.
+Escribe desde la tarea de la persona y ayúdala a elegir el siguiente paso.
+
+- Abre con acciones concretas: «edita una imagen», «ajusta el color» o «organiza un PDF».
+- Describe funciones confirmadas; no añadas prestaciones para que una ficha suene más completa.
+- Separa compilación, instalación e inicio, y prueba con archivos reales. Indica lo pendiente cerca de cada enlace de descarga.
+- Explica requisitos, formatos y límites cuando influyan en la decisión de uso.
+- Menciona el trabajo local una vez y solo donde esté verificado. Evita repetir «sin nube», «sin suscripciones» o «sin cuentas» como reclamo.
+- Sustituye slogans vagos («abierto de verdad», «una app hace una cosa bien») por datos que la persona pueda comprobar.
+- Español como idioma principal; usa términos técnicos en inglés cuando sean más precisos.
+- No afirmes paridad con otros productos ni uses su identidad visual.
 
 ## Nombres y aviso
 
