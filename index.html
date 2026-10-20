@@ -91,6 +91,9 @@
   .card .tag{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:800}
   .tag.ready{color:var(--lime)}
   .tag.alpha{color:var(--coral)}
+  .mono{display:grid;place-items:center;background:radial-gradient(300px 220px at 25% 20%,color-mix(in srgb,var(--a) 42%,transparent),transparent 70%),radial-gradient(300px 220px at 80% 80%,color-mix(in srgb,var(--b) 30%,transparent),transparent 70%),#0a0d12}
+  .mono span{width:96px;height:96px;border-radius:28px;display:grid;place-items:center;background:rgba(8,10,14,.72);border:2px solid color-mix(in srgb,var(--a) 55%,#252c37);color:var(--text);font:800 32px/1 ui-sans-serif,system-ui;letter-spacing:-.04em}
+
   .tag.plan{color:var(--muted)}
   .card h3{margin:0; font-size:20px; letter-spacing:-.02em}
   .card p{margin:0; color:var(--muted); font-size:14px; flex:1}
@@ -174,52 +177,49 @@
       <div class="section-head">
         <div>
           <div class="kicker">Apps del kit</div>
-          <h2>Las primeras piezas del kit</h2>
+          <h2>Ocho apps Adobado, un mismo criterio</h2>
         </div>
-        <p>Cada app es independiente, funciona sin conexión y guarda sus archivos donde tú decides.</p>
+        <p>Todas son locales, open source y derivadas de ArtCraft con avisos conservados. Las builds de Windows están pendientes: el estado es alpha, no disponible.</p>
       </div>
       <div class="cards">
-        <article class="card">
-          <div class="shot"><img src="assets/markdown-studio.png" alt="Markdown Studio con editor y vista previa"></div>
-          <div class="body">
-            <div class="tag ready">Disponible · v1.0.0</div>
-            <h3>Markdown Studio</h3>
-            <p>Editor y visor Markdown con GFM, resaltado de código, vista dividida, índice, autoguardado y exportación a HTML.</p>
-            <div class="links">
-              <a href="apps/markdown-studio/index.html">Abrir app</a>
-              <a class="muted" href="apps/markdown-studio/">Código</a>
-            </div>
-          </div>
-        </article>
         <article class="card">
           <div class="shot" style="display:grid;place-items:center;background:radial-gradient(300px 220px at 50% 45%,rgba(255,122,89,.16),transparent 70%),#0a0d12;">
             <img src="assets/photo-adobado.svg" alt="PhotoAdobado" style="width:34%;height:auto;object-fit:contain;">
           </div>
-          <div class="body">
-            <div class="tag alpha">Alpha · repositorio</div>
-            <h3>PhotoAdobado</h3>
-            <p>Editor de imagen local derivado de PhotoCraft: capas, máscaras, PSD y ajustes. Primer repo standalone del kit.</p>
-            <div class="links">
-              <a href="https://github.com/smouj/PhotoAdobado">Ver repo</a>
-              <a class="muted" href="docs/APPS.md">Ficha</a>
-            </div>
-          </div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>PhotoAdobado</h3><p>Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft.</p><div class="links"><a href="https://github.com/smouj/PhotoAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
         </article>
         <article class="card">
-          <div class="shot"><img src="assets/xlsx-viewer.png" alt="Visor XLSX con una hoja de cálculo"></div>
-          <div class="body">
-            <div class="tag ready">Disponible · v1.0.0</div>
-            <h3>XLSX Viewer</h3>
-            <p>Visor rápido de Excel (.xlsx, .xlsm, .xls y .csv) con todas las hojas, búsqueda, inspector de celda y exportación CSV.</p>
-            <div class="links">
-              <a href="apps/xlsx-viewer/index.html">Abrir app</a>
-              <a class="muted" href="https://github.com/smouj/xlsx-viewer">Repo</a>
-            </div>
-          </div>
+          <div class="shot mono" style="--a:#ff7a59;--b:#6cb6ff"><span>AR</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>ArtAdobado</h3><p>Arte vectorial y SVG local, derivado de VectorCraft.</p><div class="links"><a href="https://github.com/smouj/ArtAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
+        </article>
+        <article class="card">
+          <div class="shot mono" style="--a:#6cb6ff;--b:#b8f34a"><span>FI</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>FilmAdobado</h3><p>Edición de vídeo local, derivada de FilmCraft.</p><div class="links"><a href="https://github.com/smouj/FilmAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
+        </article>
+        <article class="card">
+          <div class="shot mono" style="--a:#b8f34a;--b:#ff7a59"><span>EF</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>EffectAdobado</h3><p>Efectos visuales locales, derivados de EffectCraft.</p><div class="links"><a href="https://github.com/smouj/EffectAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
+        </article>
+        <article class="card">
+          <div class="shot mono" style="--a:#f2e9dc;--b:#ff7a59"><span>LI</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>LightAdobado</h3><p>Revelado y color local, derivado de LightCraft.</p><div class="links"><a href="https://github.com/smouj/LightAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
+        </article>
+        <article class="card">
+          <div class="shot mono" style="--a:#6cb6ff;--b:#f2e9dc"><span>SO</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>SoundAdobado</h3><p>Edición de audio local, derivada de SoundCraft.</p><div class="links"><a href="https://github.com/smouj/SoundAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
+        </article>
+        <article class="card">
+          <div class="shot mono" style="--a:#ff7a59;--b:#f2e9dc"><span>DE</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>DesignAdobado</h3><p>Diseño y composición local, derivado de DesignCraft.</p><div class="links"><a href="https://github.com/smouj/DesignAdobado">Ver repo</a><a class="muted" href="docs/APPS.md">Ficha</a></div></div>
+        </article>
+        <article class="card">
+          <div class="shot mono" style="--a:#ff7a59;--b:#6cb6ff"><span>PDF</span></div>
+          <div class="body"><div class="tag alpha">Alpha · repo</div><h3>PdfAdobado</h3><p>PDF local: lectura, edición y organización. Derivado de PdfCraft.</p><div class="links"><a href="docs/APPS.md">Ficha</a><span class="muted">Repo en creación</span></div></div>
         </article>
       </div>
     </div>
   </section>
+
 
   <section id="roadmap">
     <div class="wrap">

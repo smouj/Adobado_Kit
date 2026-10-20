@@ -9,43 +9,48 @@ El kit crece por herramientas completas, no por promesas. Una app pasa a `Dispon
 - XLSX Viewer v1.0.0.
 - Marca, licencias y documentación.
 
-## v0.2.0 — Adobado Photo
+## v0.2.0 — Ocho repos standalone
 
-- Fork derivado de PhotoCraft (MIT OR Apache-2.0) con commit fijado.
-- Rebranding completo: nombre, ventana, iconos, about y assets; sin marcas de ArtCraft.
-- Conservar LICENSE-MIT, LICENSE-APACHE, NOTICE y ATTRIBUTION.md; añadir ADOBADO.md.
-- Build de Windows y prueba abrir → editar → exportar.
-- Solo entonces se marca como disponible. PhotoCraft es alpha upstream: no se presenta como sustituto profesional.
+- Hub solo con apps Adobado; Markdown Studio y XLSX Viewer salen del kit.
+- Repos standalone, no forks: PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado, PdfAdobado.
+- Rebranding visible, licencias y docs/ADOBADO.md en cada repo.
+- Estado Alpha: builds de Windows y pruebas de edición pendientes.
+- PdfAdobado: reintentar la creación del repo si GitHub aplica su límite temporal.
 
-## v0.3.0 — Adobado Vector
+## v0.2.1 — PhotoAdobado
+
+- Build de Windows y prueba abrir -> editar -> exportar.
+- Iconos definitivos y release solo con binario probado.
+
+## v0.3.0 — ArtAdobado
 
 - Lienzo SVG con zoom y cuadrícula.
 - Formas, trazos, texto y edición de nodos.
 - Importar/exportar SVG limpio.
 - Sin efectos rasterizados en la primera versión.
 
-## v0.4.0 — Adobado Film
+## v0.4.0 — FilmAdobado
 
 - Importar vídeo local y timeline.
 - Corte, orden y subtítulos.
 - Exportación local (WebCodecs o ffmpeg opcional).
 - Sin streaming ni subida de archivos.
 
-## v0.5.0 — Adobado Sound
+## v0.5.0 — SoundAdobado
 
 - Forma de onda y selección.
 - Corte, normalización y fundidos.
 - Exportación WAV/MP3.
 - Sin bibliotecas en la nube.
 
-## v0.6.0 — Adobado Press
+## v0.6.0 — PdfAdobado
 
 - Unir, separar, rotar y reordenar PDF.
 - Composición básica de páginas.
 - Exportación local.
 - Sin firma digital en la primera versión.
 
-## v0.7.0 — Adobado Light
+## v0.7.0 — LightAdobado
 
 - Revelado RAW cuando sea viable, empezando por JPEG/PNG.
 - Curvas, temperatura, exposición y color.

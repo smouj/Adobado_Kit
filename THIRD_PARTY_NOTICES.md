@@ -1,47 +1,20 @@
 # Third-party notices — Adobado Kit
 
-Cada app conserva sus propios avisos y licencias dentro de su carpeta. Este
-documento resume las dependencias del kit.
+El hub de Adobado Kit es código original bajo MIT. Las apps son repositorios independientes y conservan sus propios avisos y licencias.
 
-## SheetJS Community Edition 0.20.3
+## Upstreams de ArtCraft
 
-- App: `apps/xlsx-viewer`
-- Licencia: Apache-2.0
-- Archivo: `apps/xlsx-viewer/vendor/xlsx.full.min.js`
-- Texto: `apps/xlsx-viewer/vendor/SHEETJS_LICENSE.txt`
-- Copyright (C) 2013-present SheetJS LLC
+- PhotoCraft: https://github.com/storytold/photocraft (MIT OR Apache-2.0)
+- VectorCraft: https://github.com/storytold/vectorcraft (Apache-2.0)
+- FilmCraft: https://github.com/storytold/filmcraft (Apache-2.0)
+- EffectCraft: https://github.com/storytold/effectcraft (Apache-2.0)
+- LightCraft: https://github.com/storytold/lightcraft (Apache-2.0)
+- SoundCraft: https://github.com/storytold/soundcraft (Apache-2.0)
+- DesignCraft: https://github.com/storytold/designcraft (Apache-2.0)
+- PdfCraft: https://github.com/storytold/pdfcraft (Apache-2.0)
 
-## marked 12.0.2
-
-- App: `apps/markdown-studio`
-- Licencia: MIT
-- Archivo: `apps/markdown-studio/vendor/marked.min.js`
-- Texto: `apps/markdown-studio/vendor/LICENSES/marked.txt`
-
-## DOMPurify 3.1.6
-
-- App: `apps/markdown-studio`
-- Licencia: Apache-2.0
-- Archivo: `apps/markdown-studio/vendor/purify.min.js`
-- Texto: `apps/markdown-studio/vendor/LICENSES/dompurify.txt`
-
-## Highlight.js 11.10.0
-
-- App: `apps/markdown-studio`
-- Licencia: BSD-3-Clause
-- Archivos: `vendor/highlight.min.js`, `vendor/github-dark.min.css`
-- Texto: `apps/markdown-studio/vendor/LICENSES/highlightjs.txt`
-
-## PhotoCraft / PhotoAdobado
-
-- Repo derivado: https://github.com/smouj/PhotoAdobado
-- Upstream: https://github.com/storytold/photocraft
-- Commit base: 03d0c7e3b39cfb401cdbba590431141ee4c6c8fa
-- Licencia: MIT OR Apache-2.0; se conservan LICENSE-MIT, LICENSE-APACHE, NOTICE y ATTRIBUTION.md.
-- La marca y los logos de ArtCraft se han retirado de la distribucion.
+Cada repo de app conserva LICENSE, NOTICE y ATTRIBUTION del upstream correspondiente y añade docs/ADOBADO.md con el commit de origen y los cambios.
 
 ## Marcas
 
-Adobe y los nombres de sus productos son marcas de Adobe Inc. Adobado Kit no
-está afiliado a Adobe. Los nombres se usan solo para describir categorías de
-herramientas.
+ArtCraft, PhotoCraft, VectorCraft, FilmCraft, EffectCraft, LightCraft, SoundCraft, DesignCraft y PdfCraft son marcas del ArtCraft Team y no están cubiertas por la licencia de código. Adobe y sus productos son marcas de Adobe Inc. Adobado Kit no está afiliado a Adobe ni a ArtCraft. Las marcas se mencionan solo para describir el origen y la categoría de cada herramienta.

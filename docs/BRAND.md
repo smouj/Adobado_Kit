@@ -39,8 +39,8 @@ Tres formas: coral, azul y una barra lima. Representan disciplinas distintas den
 
 ## Nombres de apps
 
-- `Adobado` + categoría: Photo, Vector, Film, Sound, Press, Light.
-- Las apps ya publicadas conservan su nombre: Markdown Studio, XLSX Viewer.
+- Sufijo `Adobado`: PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado, PdfAdobado.
+- Los nombres internos de crate pueden conservar el upstream para no romper el build.
 - Evitar nombres que imiten marcas de Adobe (Photoshop, Illustrator, Premiere, etc.).
 
 ## Aviso legal

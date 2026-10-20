@@ -3,82 +3,70 @@
 **Herramientas creativas locales, sin suscripciones y sin nube.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-b8f34a)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.0-6cb6ff)](https://github.com/smouj/Adobado_Kit/releases)
+[![Version](https://img.shields.io/badge/version-0.2.0-6cb6ff)](https://github.com/smouj/Adobado_Kit/releases)
 [![Local-first](https://img.shields.io/badge/privacy-100%25%20local-b8f34a)](#principios)
 [![Open source](https://img.shields.io/badge/open%20source-MIT-ff7a59)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Web-555)](#apps)
+[![Apps](https://img.shields.io/badge/apps-8-6cb6ff)](#apps)
 
-Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en tu equipo. Cada app es independiente, funciona sin conexión y no pide cuentas.
-
-![Hub de Adobado Kit](assets/hub.png)
+Un kit personal de aplicaciones de escritorio para trabajar con tus archivos en tu equipo. Cada app es un repo independiente, funciona sin conexión y no pide cuentas.
 
 > **Adobado Kit no está afiliado a Adobe.** Es un proyecto personal e independiente. Los nombres de productos se usan solo para describir categorías de herramientas.
 
-## Apps disponibles
+## Apps
 
 | App | Qué hace | Estado |
 |---|---|---|
-| [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local derivado de PhotoCraft: capas, máscaras, PSD y ajustes. | Alpha |
-| [Markdown Studio](apps/markdown-studio/) | Editor y visor Markdown con GFM, resaltado, índice y exportación HTML. | v1.0.0 |
-| [XLSX Viewer](apps/xlsx-viewer/) | Visor local de Excel (.xlsx/.xlsm/.xls/.csv) con búsqueda e inspector de celda. | v1.0.0 |
+| [PhotoAdobado](https://github.com/smouj/PhotoAdobado) | Editor de imagen local: capas, máscaras, PSD y ajustes. Derivado de PhotoCraft. | Alpha |
+| [ArtAdobado](https://github.com/smouj/ArtAdobado) | Arte vectorial y SVG local. Derivado de VectorCraft. | Alpha |
+| [FilmAdobado](https://github.com/smouj/FilmAdobado) | Edición de vídeo local. Derivado de FilmCraft. | Alpha |
+| [EffectAdobado](https://github.com/smouj/EffectAdobado) | Efectos visuales locales. Derivado de EffectCraft. | Alpha |
+| [LightAdobado](https://github.com/smouj/LightAdobado) | Revelado y color local. Derivado de LightCraft. | Alpha |
+| [SoundAdobado](https://github.com/smouj/SoundAdobado) | Edición de audio local. Derivado de SoundCraft. | Alpha |
+| [DesignAdobado](https://github.com/smouj/DesignAdobado) | Diseño y composición local. Derivado de DesignCraft. | Alpha |
+| PdfAdobado | PDF local: lectura, edición y organización. Derivado de PdfCraft. | Repo en creación |
 
-Abre el hub en [`index.html`](index.html) o entra directamente en cada app.
+El catálogo con commits, licencias y estado real está en [docs/APPS.md](docs/APPS.md).
 
-El catálogo completo, con repos y estado real, está en [docs/APPS.md](docs/APPS.md).
+## Estado
 
-## En el taller
+Las ocho apps tienen código importado y rebrandeado, pero **ninguna se marca como disponible**: falta compilar en Windows y probar abrir, editar y exportar. Hasta entonces el estado es Alpha y no se publican binarios.
 
-- **Adobado Photo** — ajustes, recorte y exportación de imagen.
-- **Adobado Vector** — editor SVG con nodos y formas.
-- **Adobado Film** — timeline, corte y subtítulos.
-- **Adobado Sound** — forma de onda, corte y normalización.
-- **Adobado Press** — composición y PDF.
-- **Adobado Light** — revelado y color para fotografía.
-
-El detalle y el orden están en [docs/ROADMAP.md](docs/ROADMAP.md). No hay fechas infladas: cada herramienta se publica cuando es útil.
-
-## Upstream: ArtCraft
-
-Las futuras apps de categoría Adobe se construirán como derivados de [ArtCraft](https://github.com/storytold) (MIT/Apache-2.0), con commits fijados, avisos conservados y rebranding propio. La marca, el wordmark y los logos de ArtCraft son trademarks y no se usan en este kit.
-
-Estado actual: auditoría y pipeline de sincronización listos; **ninguna app derivada se presenta como disponible**. El detalle legal y técnico está en [docs/UPSTREAM.md](docs/UPSTREAM.md).
+Cada repo conserva LICENSE, NOTICE y ATTRIBUTION del upstream. ArtCraft, PhotoCraft, VectorCraft y compañía son marcas del ArtCraft Team y no están cubiertas por la licencia de código; se retiran de las distribuciones.
 
 ## Principios
 
 1. **Local primero.** Tus archivos no salen del equipo. Sin cuentas, servidores ni telemetría.
-2. **Abierto de verdad.** Código MIT, dependencias auditables y formatos estándar.
-3. **Herramientas honestas.** Cada app hace una cosa bien y dice claramente qué no hace.
-
-## Estructura
-
-```
-Adobado_Kit/
-├─ index.html                 # hub / landing
-├─ apps/
-│  ├─ markdown-studio/        # editor y visor Markdown
-│  └─ xlsx-viewer/            # visor de Excel
-├─ assets/                    # logo y capturas
-├─ docs/
-│  ├─ ROADMAP.md
-│  └─ BRAND.md
-├─ LICENSE
-└─ THIRD_PARTY_NOTICES.md
-```
+2. **Abierto de verdad.** Código MIT/Apache, dependencias auditables y formatos estándar.
+3. **Herramientas honestas.** Cada app dice qué hace, qué no hace y en qué estado está.
 
 ## Uso
 
-- **Hub:** abre `index.html` en el navegador.
-- **Apps:** cada carpeta incluye su `index.html` y, cuando aplica, un `launcher.vbs` para abrirla como ventana de app en Windows.
-- **Sin instalador:** no hay build, ni Node, ni dependencias que instalar.
+- Abre el hub en [index.html](index.html) o en https://smouj.github.io/Adobado_Kit/.
+- Cada app se descarga y compila desde su propio repositorio.
+- No hay instalador ni backend en el hub: es HTML estático.
+
+## Estructura
+
+    Adobado_Kit/
+    ├─ index.html                 # hub / landing
+    ├─ assets/                    # logo, iconos y capturas
+    ├─ docs/
+    │  ├─ APPS.md                 # catálogo y estado real
+    │  ├─ ROADMAP.md
+    │  ├─ BRAND.md
+    │  └─ UPSTREAM.md             # auditoría de ArtCraft
+    ├─ tools/
+    │  ├─ import_apps.py          # importación y rebranding
+    │  └─ sync-upstream.sh
+    ├─ LICENSE
+    └─ THIRD_PARTY_NOTICES.md
 
 ## Desarrollo
 
-Las apps son HTML, CSS y JavaScript sin frameworks. Las librerías de terceros están vendorizadas en cada app y sus licencias se conservan en `vendor/LICENSES/` o en los avisos correspondientes.
-
-Para publicar el hub y las apps en GitHub Pages, sirve la raíz del repo. No hay backend.
+El hub es HTML, CSS y JavaScript sin frameworks. Las apps son proyectos Rust independientes; sus repos contienen sus propias instrucciones de build.
 
 ## Licencia
 
-MIT para el código del kit. Cada app conserva sus avisos de terceros. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+MIT para el código del hub. Cada app conserva las licencias de su upstream. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Hecho por [SMOUJ013](https://github.com/smouj).

@@ -1,14 +1,20 @@
 # Changelog — Adobado Kit
 
-## [Unreleased]
+## [0.2.0] — 2026-10-20
+
+### Cambiado
+- El hub deja de incluir Markdown Studio y XLSX Viewer; solo cubre las apps Adobado.
+- Ocho repos standalone, sin forks: PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado y PdfAdobado.
+- Nombres de producto con sufijo Adobado; los crates internos se conservan.
+- README y docs/APPS.md con estado Alpha y enlace a cada repo.
 
 ### Añadido
-- Auditoría de ArtCraft con licencias, commits fijados y restricciones de marca.
-- Documento docs/UPSTREAM.md y script tools/sync-upstream.sh.
-- Nota de afiliación y política de derivados en el README y el roadmap.
+- docs/ADOBADO.md, aviso de modificación en NOTICE y rebranding en cada repo.
+- tools/import_apps.py para repetir la importación.
 
 ### Notas
-- Ninguna app derivada se presenta como disponible todavía.
+- Builds de Windows pendientes; ninguna app se marca como disponible.
+- PdfAdobado: reintentar la creación del repo si GitHub limita la creación masiva.
 
 ## [0.1.0] — 2026-10-20
 

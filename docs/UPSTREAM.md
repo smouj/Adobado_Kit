@@ -44,10 +44,11 @@ El workspace de PhotoCraft es grande (decenas de crates, egui/wgpu, dependencias
 
 ## Estado actual
 
-- Adobado Kit 0.1.0 incluye dos apps originales: Markdown Studio y XLSX Viewer.
-- No hay código de ArtCraft empaquetado en el hub.
-- El siguiente paso es crear el fork Adobado Photo desde PhotoCraft, aplicar el rebranding y validar el build de Windows.
-- Hasta que exista ese build probado, las apps de categoría Adobe figuran como planificadas, no como disponibles.
+- Adobado Kit 0.2.0 ya no incluye Markdown Studio ni XLSX Viewer: el hub solo cubre las apps Adobado.
+- Ocho repos standalone, no forks: PhotoAdobado, ArtAdobado, FilmAdobado, EffectAdobado, LightAdobado, SoundAdobado, DesignAdobado y PdfAdobado.
+- Cada repo conserva licencias y avisos y añade docs/ADOBADO.md con el commit de origen.
+- Ninguna build de Windows está validada todavía: el estado es Alpha.
+- PdfAdobado puede necesitar un reintento de creación si GitHub aplica su límite temporal de repos.
 
 ## Sincronización
 
